@@ -52,11 +52,14 @@ genfscon sysfs /kernel/gpu/gpu_mm_min_clock                                     
 # GPS
 genfscon sysfs /devices/virtual/sec/gps/GPS_PWR_EN/value                               u:object_r:sysfs_gps_writable:s0
 
-# NPU
-genfscon sysfs /devices/platform/npu_exynos/version                                    u:object_r:sysfs_npu_version:s0
+# LCD
+genfscon sysfs /devices/platform/panel_drv_0/lcd/panel/cell_id                         u:object_r:sysfs_lcd_writable:s0
 
 # mem_boost
 genfscon sysfs /kernel/mm/vmscan/mem_boost_mode                                        u:object_r:sysfs_mem_boost_writable:s0
+
+# NPU
+genfscon sysfs /devices/platform/npu_exynos/version                                    u:object_r:sysfs_npu_version:s0
 
 # Sensors
 genfscon sysfs /devices/virtual/sensors/als_rear/als_enable                            u:object_r:sysfs_sensors_writable:s0

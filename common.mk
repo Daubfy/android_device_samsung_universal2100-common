@@ -66,6 +66,10 @@ PRODUCT_SOONG_NAMESPACES += \
 AB_OTA_UPDATER := false
 PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
 
+# RenderScript HAL
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0-impl
+
 # Vendor service manager
 PRODUCT_PACKAGES += \
     vndservicemanager

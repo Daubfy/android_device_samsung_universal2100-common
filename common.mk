@@ -87,6 +87,21 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/samsung
 
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors-service.samsung-multihal
+
+PRODUCT_PACKAGES += \
+    android.hardware.sensor.accelerometer.prebuilt.xml \
+    android.hardware.sensor.barometer.prebuilt.xml \
+    android.hardware.sensor.compass.prebuilt.xml \
+    android.hardware.sensor.gyroscope.prebuilt.xml \
+    android.hardware.sensor.hifi_sensors.prebuilt.xml \
+    android.hardware.sensor.light.prebuilt.xml \
+    android.hardware.sensor.proximity.prebuilt.xml \
+    android.hardware.sensor.stepcounter.prebuilt.xml \
+    android.hardware.sensor.stepdetector.prebuilt.xml
+
 # Memtrack
 PRODUCT_PACKAGES += \
     android.hardware.memtrack-service.samsung-mali

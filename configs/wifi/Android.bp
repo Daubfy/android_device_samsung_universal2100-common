@@ -1,0 +1,25 @@
+//
+// Copyright (C) 2025 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_defaults {
+    name: "wifi_etc_defaults.exynos2100",
+    vendor: true,
+    sub_dir: "wifi",
+}
+
+prebuilt_etc {
+    name: "p2p_supplicant_overlay.conf.exynos2100",
+    defaults: ["wifi_etc_defaults.exynos2100"],
+    src: "p2p_supplicant_overlay.conf",
+    filename: "p2p_supplicant_overlay.conf",
+}
+
+prebuilt_etc {
+    name: "wpa_supplicant_overlay.conf.exynos2100",
+    defaults: ["wifi_etc_defaults.exynos2100"],
+    src: "wpa_supplicant_overlay.conf",
+    filename: "wpa_supplicant_overlay.conf",
+}

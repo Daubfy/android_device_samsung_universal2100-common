@@ -64,6 +64,10 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf
 
 PRODUCT_PACKAGES += \
+    p2p_supplicant_overlay.conf.exynos2100 \
+    wpa_supplicant_overlay.conf.exynos2100
+
+PRODUCT_PACKAGES += \
     android.hardware.wifi.direct.prebuilt.xml \
     android.hardware.wifi.passpoint.prebuilt.xml \
     android.hardware.wifi.prebuilt.xml

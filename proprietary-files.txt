@@ -104,6 +104,12 @@ vendor/lib64/libhermes_cred.so
 vendor/lib/vendor.samsung.hardware.security.drk@2.0.so
 vendor/lib64/vendor.samsung.hardware.security.drk@2.0.so
 
+## Graphics
+vendor/lib/egl/libGLES_mali.so
+vendor/lib/hw/vulkan.mali.so
+vendor/lib64/egl/libGLES_mali.so
+vendor/lib64/hw/vulkan.mali.so
+
 ## Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.0_strongbox-service
 vendor/etc/init/android.hardware.keymaster@4.0_strongbox-service.rc

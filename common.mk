@@ -86,6 +86,27 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
 
+# Graphics
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.mapper@4.0-impl \
+    android.hardware.graphics.allocator@4.0-service \
+    android.hardware.graphics.allocator@4.0-impl
+
+PRODUCT_PACKAGES += \
+    android.hardware.composer.hwc3-service.slsi \
+    libion_exynos \
+    libion
+
+PRODUCT_PACKAGES += \
+    android.hardware.vulkan.compute-0.prebuilt.xml \
+    android.hardware.vulkan.level-1.prebuilt.xml
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml \
+    frameworks/native/data/etc/android.software.opengles.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.opengles.deqp.level.xml \
+    frameworks/native/data/etc/android.hardware.vulkan.version-1_1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.version.xml \
+    frameworks/native/data/etc/android.software.vulkan.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 PRODUCT_ENFORCE_RRO_TARGETS := *

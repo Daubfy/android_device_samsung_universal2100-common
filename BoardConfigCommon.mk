@@ -146,6 +146,9 @@ VENDOR_SECURITY_PATCH := 2025-09-01
 ## RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
+## SECCOMP Policy
+BOARD_SECCOMP_POLICY += $(COMMON_PATH)/seccomp
+
 ## SELinux
 BOARD_SEPOLICY_TEE_FLAVOR := teegris
 include device/samsung_slsi/sepolicy/sepolicy.mk

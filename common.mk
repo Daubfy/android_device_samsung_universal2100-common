@@ -39,6 +39,8 @@ PRODUCT_PACKAGES += \
     audio.r_submix.default \
     audio.usb.default
 
+TARGET_EXCLUDES_AUDIOFX := true
+
 PRODUCT_PACKAGES += \
     audio_board_info.exynos2100 \
     audio_policy_config.exynos2100

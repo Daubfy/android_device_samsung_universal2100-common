@@ -10,6 +10,9 @@ aaudio.hw_burst_min_usec=2000
 ## Dalvik
 dalvik.vm.lockprof.threshold=500
 
+## Fastbootd
+ro.fastbootd.available=true
+
 ## Camera
 ro.camera.disableJpegR=true
 

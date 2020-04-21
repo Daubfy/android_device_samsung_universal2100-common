@@ -309,6 +309,10 @@ PRODUCT_PACKAGES += \
     powerhint.json.exynos2100 \
     task_profiles.json.exynos2100
 
+# PowerShare
+PRODUCT_PACKAGES += \
+    vendor.lineage.powershare@1.0-service.samsung
+
 # RIL
 PRODUCT_PACKAGES += \
     cbd \

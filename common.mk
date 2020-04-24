@@ -42,6 +42,7 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
+PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # init
 PRODUCT_PACKAGES += \
@@ -73,6 +74,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     hostapd \
+    WifiOverlay \
     wpa_supplicant \
     wpa_supplicant.conf
 

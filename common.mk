@@ -44,6 +44,11 @@ PRODUCT_PACKAGES += \
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-impl:64 \
+    android.hardware.gatekeeper@1.0-service
+
 # init
 PRODUCT_PACKAGES += \
     init.exynos2100 \

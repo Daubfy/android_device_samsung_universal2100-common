@@ -1,5 +1,9 @@
 # Proprietary files - from Samsung package version G991BOXMHHYJ1, unless pinned
 
+## Gatekeeper
+vendor/lib/hw/gatekeeper.exynos2100.so
+vendor/lib64/hw/gatekeeper.exynos2100.so
+
 ## RIL
 vendor/bin/cbd
 vendor/bin/cass

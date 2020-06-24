@@ -46,6 +46,9 @@ ro.frp.pst=/dev/block/persistent
 vendor.securehw.available=false
 vendor.securenvm.available=false
 
+## Incremental FS
+ro.incremental.enable=true
+
 ## keystore
 ro.hardware.keystore=mdfpp
 ro.hardware.keystore_desede=true

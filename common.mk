@@ -143,6 +143,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.fingerprint.prebuilt.xml
 
+# GPS
+PRODUCT_PACKAGES += \
+    android.hardware.location.gps.prebuilt.xml
+
 # Graphics
 PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl \

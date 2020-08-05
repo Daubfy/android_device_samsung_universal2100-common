@@ -1,5 +1,20 @@
 # Proprietary files - from Samsung package version G991BOXMHHYJ1, unless pinned
 
+## Teegris
+vendor/bin/tzdaemon
+vendor/bin/tzts_daemon
+vendor/etc/init/teegris_v4.rc
+vendor/lib/libteecl.so
+vendor/lib/libuuid.so;MODULE_SUFFIX=_vendor
+vendor/lib64/libteecl.so
+vendor/lib64/libuuid.so;MODULE_SUFFIX=_vendor
+
+## Teegris Firmware
+vendor/tee/00000000-0000-0000-0000-42494f535542
+vendor/tee/00000000-0000-0000-0000-6d706f667376
+vendor/tee/driver/18d9f073-18a5-4ade-9def-875e07f7f293_
+vendor/tee/tui/resolution_common/ID00000100
+
 ## Wi-Fi
 vendor/etc/init/wifi.rc
 vendor/etc/init/wifi_brcm.rc

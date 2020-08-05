@@ -4,6 +4,10 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+from extract_utils.fixups_lib import (
+    lib_fixups,
+    lib_fixups_user_type,
+)
 from extract_utils.main import (
     ExtractUtils,
     ExtractUtilsModule,
@@ -14,9 +18,21 @@ namespace_imports = [
     'vendor/samsung/exynos2100'
 ]
 
+def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
+    return f'{lib}_{partition}' if partition == 'vendor' else None
+
+
+lib_fixups: lib_fixups_user_type = {
+    **lib_fixups,
+    (
+        'libuuid',
+    ): lib_fixup_vendor_suffix,
+}
+
 module = ExtractUtilsModule(
     'exynos2100',
     'samsung',
+    lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
 )
 

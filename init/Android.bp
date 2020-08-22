@@ -42,6 +42,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.samsung",
+    defaults: ["init_etc_defaults.exynos2100"],
+    src: "init.samsung.rc",
+    filename: "init.samsung.rc",
+}
+
+prebuilt_etc {
     name: "init.usb.exynos2100",
     defaults: ["init_etc_defaults.exynos2100"],
     src: "init.exynos2100.usb.rc",

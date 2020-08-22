@@ -207,6 +207,7 @@ PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 # init
 PRODUCT_PACKAGES += \
     init.exynos2100 \
+    init.samsung \
     init.usb.exynos2100 \
     init.ueventd.exynos2100 \
     init.recovery.exynos2100 \

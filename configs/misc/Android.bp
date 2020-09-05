@@ -10,6 +10,13 @@ prebuilt_defaults {
 }
 
 prebuilt_etc {
+    name: "public.libraries.exynos2100",
+    defaults: ["misc_etc_defaults.exynos2100"],
+    src: "public.libraries.txt",
+    filename: "public.libraries.txt",
+}
+
+prebuilt_etc {
     name: "sehradiomanager.conf.exynos2100",
     defaults: ["misc_etc_defaults.exynos2100"],
     src: "sehradiomanager.conf",

@@ -225,6 +225,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.light-service.samsung
 
+# Public Libraries
+PRODUCT_PACKAGES += \
+    public.libraries.exynos2100
+
 # Soong Namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(COMMON_PATH) \

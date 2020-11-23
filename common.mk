@@ -281,7 +281,8 @@ PRODUCT_PACKAGES += \
     android.hardware.power-service.pixel-libperfmgr
 
 PRODUCT_PACKAGES += \
-    powerhint.json.exynos2100
+    powerhint.json.exynos2100 \
+    task_profiles.json.exynos2100
 
 # RIL
 PRODUCT_PACKAGES += \

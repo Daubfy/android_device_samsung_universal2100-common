@@ -15,3 +15,10 @@ prebuilt_etc {
     src: "powerhint.json",
     filename: "powerhint.json",
 }
+
+prebuilt_etc {
+    name: "task_profiles.json.exynos2100",
+    defaults: ["power_etc_defaults.exynos2100"],
+    src: "task_profiles.json",
+    filename: "task_profiles.json",
+}

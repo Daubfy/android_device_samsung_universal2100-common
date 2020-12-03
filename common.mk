@@ -71,6 +71,10 @@ PRODUCT_PACKAGES += \
 
 $(call soong_config_set,brcm_libbt,custom_bt_config,//$(COMMON_PATH):exynos2100.txt)
 
+# ConfigStore
+PRODUCT_PACKAGES += \
+    disable_configstore
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey

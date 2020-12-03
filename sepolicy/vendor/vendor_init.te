@@ -20,6 +20,7 @@ set_prop(vendor_init, vendor_hwc_prop)
 set_prop(vendor_init, vendor_sec_nfc_prop)
 set_prop(vendor_init, vendor_securehw_prop)
 set_prop(vendor_init, vendor_securenvm_prop)
+set_prop(vendor_init, vendor_power_prop)
 
 dontaudit vendor_init { default_prop system_prop build_prop }:property_service set;
 

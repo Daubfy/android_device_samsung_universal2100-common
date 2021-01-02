@@ -80,6 +80,23 @@ $(call soong_config_set,brcm_libbt,custom_bt_config,//$(COMMON_PATH):exynos2100.
 PRODUCT_PACKAGES += \
     charger_res_images_vendor
 
+# Camera
+PRODUCT_PACKAGES += \
+    android.hardware.camera.provider-service.samsung \
+    libsensorndkbridge
+
+PRODUCT_PACKAGES += \
+    android.hardware.camera.concurrent.prebuilt.xml \
+    android.hardware.camera.flash-autofocus.prebuilt.xml \
+    android.hardware.camera.front.prebuilt.xml \
+    android.hardware.camera.full.prebuilt.xml \
+    android.hardware.camera.raw.prebuilt.xml
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.camera.ar.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.ar.xml \
+    frameworks/native/data/etc/android.hardware.camera.autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.autofocus.xml \
+    frameworks/native/data/etc/android.hardware.camera.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.xml
+
 # ConfigStore
 PRODUCT_PACKAGES += \
     disable_configstore

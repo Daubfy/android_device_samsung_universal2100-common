@@ -82,6 +82,60 @@ vendor/firmware/default_configuration.flm.cfg.bin
 vendor/firmware/dsp_reloc_rules.bin
 vendor/firmware/volumemonitor.bin
 
+## Camera dependencies
+vendor/lib/libSEF.quram.so
+vendor/lib/libexynoscamera_plugin.so
+vendor/lib/libexynoscamera_plugin_utils.so
+vendor/lib/libhwjsqz.so
+vendor/lib/libIMUSensor.so
+vendor/lib/libmpbase.so
+vendor/lib/libsensorlistener.so
+vendor/lib/libuniapi.so
+vendor/lib/libuniplugin.so
+vendor/lib/libvdis_core.so
+vendor/lib/libvdis_interface.so
+vendor/lib/libeis_core.so
+vendor/lib/libvpl.so
+vendor/lib/vendor.samsung.hardware.hyper-V2-ndk_platform.so
+vendor/lib/vendor.samsung.hardware.thermal@1.0.so
+vendor/lib64/libSEF.quram.so
+vendor/lib64/libexynoscamera_plugin.so
+vendor/lib64/libexynoscamera_plugin_utils.so
+vendor/lib64/libhwjsqz.so
+vendor/lib64/libIMUSensor.so
+vendor/lib64/libsemseg.so
+vendor/lib64/libmpbase.so
+vendor/lib64/libsensorlistener.so
+vendor/lib64/libuniapi.so
+vendor/lib64/libuniplugin.so
+vendor/lib64/libvdis_core.so
+vendor/lib64/libvdis_interface.so
+vendor/lib64/libeis_core.so
+vendor/lib64/libvpl.so
+vendor/lib64/vendor.samsung.hardware.hyper-V2-ndk_platform.so
+vendor/lib64/vendor.samsung.hardware.thermal@1.0.so
+
+## Camera IDDQ plugin
+vendor/lib/libIDDQD_core.so
+vendor/lib/libIDDQD_interface.so
+vendor/lib/libLocalTM_preview_core.so
+vendor/lib/libOpenCv.camera.samsung.so
+vendor/lib64/libIDDQD_core.so
+vendor/lib64/libIDDQD_interface.so
+vendor/lib64/libLocalTM_preview_core.so
+vendor/lib64/libOpenCv.camera.samsung.so
+
+## Camera firmware
+vendor/firmware/clFGN10BitNV12_32.bin
+vendor/firmware/clFGN10BitNV12_64.bin
+vendor/firmware/clFGN10BitYV12_32.bin
+vendor/firmware/clFGN10BitYV12_64.bin
+vendor/firmware/clFGN8BitNV12_32.bin
+vendor/firmware/clFGN8BitNV12_64.bin
+vendor/firmware/clFGN8BitYV12_32.bin
+vendor/firmware/clFGN8BitYV12_64.bin
+vendor/firmware/libgaussian3x3.elf
+
 ## Gatekeeper
 vendor/lib/hw/gatekeeper.exynos2100.so
 vendor/lib64/hw/gatekeeper.exynos2100.so

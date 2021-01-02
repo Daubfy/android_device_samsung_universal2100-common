@@ -10,6 +10,9 @@ aaudio.hw_burst_min_usec=2000
 ## Dalvik
 dalvik.vm.lockprof.threshold=500
 
+## Camera
+ro.camera.disableJpegR=true
+
 ## FRP
 ro.frp.pst=/dev/block/persistent
 

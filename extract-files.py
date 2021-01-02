@@ -44,6 +44,15 @@ blob_fixups: blob_fixups_user_type = {
             '82 0C 80 52 24 00 80 52 E1 03 15 AA 08 00 40 F9 E3 03 14 AA',
             '82 0C 80 52 24 00 80 52 E1 03 15 AA 08 00 40 F9 03 00 80 D2'
         ),
+    (
+        'vendor/lib/libsensorlistener.so',
+        'vendor/lib/libvdis_core.so',
+        'vendor/lib64/libsensorlistener.so',
+        'vendor/lib64/libvdis_core.so',
+    ): blob_fixup()
+        .add_needed('libsensorndkbridge_shim.so')
+        .add_needed('libutils-v32.so')
+        .binary_regex_replace(b'_ZN7android6Thread3runEPKcim', b'_ZN7utils326Thread3runEPKcim'),
     'vendor/lib64/libskeymaster4device.so': blob_fixup()
         .replace_needed('libcrypto.so', 'libcrypto-v33.so')
         .add_needed('libshim_crypto.so'),

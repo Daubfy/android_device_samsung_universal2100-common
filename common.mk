@@ -30,3 +30,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/init/fstab.exynos2100:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.exynos2100
+
+# Vendor service manager
+PRODUCT_PACKAGES += \
+    vndservicemanager

@@ -2,7 +2,6 @@ on early-init
     mkdir /mnt/vendor/efs 0771 radio system
     mkdir /mnt/vendor/cpefs 0771 radio system
     mkdir /mnt/vendor/persist 0771 system system
-    mount debugfs /sys/kernel/debug /sys/kernel/debug
 
 on init
     # See storage config details at http://source.android.com/tech/storage/
@@ -686,9 +685,6 @@ on post-fs-data
 
     mkdir /data/vendor/camera 0777 root root
 
-    chmod 0755 /sys/kernel/debug/tracing
-    restorecon /sys/kernel/debug/tracing/trace_marker
-
     # ALS_rear_sensor
     chown system radio /sys/class/sensors/als_rear/name
     chown system radio /sys/class/sensors/als_rear/vendor
@@ -788,10 +784,6 @@ on boot
     chmod 0664 /dev/cpuset/moderate/tasks
     chmod 0664 /dev/cpuset/moderate/cpus
 
-    # Allow to access debugfs for system:system
-    chmod 0755 /sys/kernel/debug
-    chown system system /sys/kernel/debug
-
     # LPM Info
     chown system system /efs/lpm_info.log
     chmod 0660 /efs/lpm_info.log
@@ -864,10 +856,6 @@ on boot
 
     setprop ro.radio.noril no
 
-    # Set up kernel tracing, but disable it by default
-    chmod 0222 /sys/kernel/debug/tracing/trace_marker
-    write /sys/kernel/debug/tracing/tracing_on 0
-
     # A-Box IPC work-queue CPU affinity is set to little-core
     write /sys/devices/virtual/workqueue/abox_ipc/cpumask f
 
@@ -883,8 +871,6 @@ on boot
     chown audioserver system /sys/devices/platform/18c50000.abox/0.abox-debug/calliope_dram
     chown audioserver system /sys/devices/platform/18c50000.abox/0.abox-debug/calliope_log
     chown audioserver system /sys/devices/platform/18c50000.abox/0.abox-debug/calliope_slog
-    chown audioserver system /sys/kernel/debug/regmap/18c50000.abox/registers
-    chown audioserver system /proc/abox/log-00
     chown audioserver system /proc/abox/qos
 
     # Permission for PCIE L1,L2 Disable

@@ -202,6 +202,7 @@ $(call soong_config_set,samsungVars,target_keymaster4_library,//vendor/samsung/e
 # Kernel
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := true
 PRODUCT_ENABLE_UFFD_GC := true
+PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
 # init
 PRODUCT_PACKAGES += \

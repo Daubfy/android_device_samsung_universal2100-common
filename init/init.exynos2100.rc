@@ -4,20 +4,7 @@ on early-init
     mkdir /mnt/vendor/persist 0771 system system
 
 on init
-    # See storage config details at http://source.android.com/tech/storage/
-    mkdir /storage/sdcard 0000 root root
-    mkdir /storage/usb1 0000 root root
-    mkdir /storage/usb2 0000 root root
-    mkdir /mnt/media_rw/sdcard 0700 media_rw media_rw
-    mkdir /mnt/media_rw/usb1 0700 media_rw media_rw
-    mkdir /mnt/media_rw/usb2 0700 media_rw media_rw
-
-    export SECONDARY_STORAGE /storage/sdcard:/storage/usb1:/storage/usb2
-
-    # Support legacy paths
-    symlink /storage/sdcard /mnt/ext_sd
-    symlink /data/app /factory
-
+    # Reactivation Lock
     symlink /dev/block/platform/13100000.ufs/by-name/steady /dev/block/steady
     symlink /dev/block/platform/13100000.ufs/by-name/persistent /dev/block/persistent
     symlink /dev/block/platform/13100000.ufs/by-name/param /dev/block/param
@@ -854,8 +841,6 @@ on boot
     chmod 0770 /mnt/vendor/efs/bluetooth
     chmod 0660 /mnt/vendor/efs/bluetooth/bt_addr
 
-    setprop ro.radio.noril no
-
     # A-Box IPC work-queue CPU affinity is set to little-core
     write /sys/devices/virtual/workqueue/abox_ipc/cpumask f
 
@@ -960,7 +945,6 @@ on fs
 
     wait /dev/block/by-name/sec_efs
     mount ext4 /dev/block/by-name/sec_efs /efs nosuid nodev noatime noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic
-    setprop ro.crypto.fuse_sdcard true
 
     wait /dev/block/by-name/spu
     mount ext4 /dev/block/by-name/spu /spu nosuid nodev noatime noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic

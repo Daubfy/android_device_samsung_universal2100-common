@@ -19,6 +19,16 @@ BOARD_SHIPPING_API_LEVEL := 30
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-impl:64 \
+    android.hardware.bluetooth@1.0-service \
+    libbt-vendor:64
+
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth.prebuilt.xml \
+    android.hardware.bluetooth_le.prebuilt.xml
+
 # init
 PRODUCT_PACKAGES += \
     init.exynos2100 \

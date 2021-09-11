@@ -309,10 +309,6 @@ PRODUCT_COPY_FILES += \
 AB_OTA_UPDATER := false
 PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
 
-# RenderScript HAL
-PRODUCT_PACKAGES += \
-    android.hardware.renderscript@1.0-impl
-
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.samsung \

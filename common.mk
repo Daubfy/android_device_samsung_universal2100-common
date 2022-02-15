@@ -71,6 +71,10 @@ PRODUCT_PACKAGES += \
 
 $(call soong_config_set,brcm_libbt,custom_bt_config,//$(COMMON_PATH):exynos2100.txt)
 
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm-service.clearkey
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
 PRODUCT_ENFORCE_RRO_TARGETS := *

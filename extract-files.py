@@ -9,9 +9,15 @@ from extract_utils.main import (
     ExtractUtilsModule,
 )
 
+namespace_imports = [
+    'device/samsung/exynos2100',
+    'vendor/samsung/exynos2100'
+]
+
 module = ExtractUtilsModule(
     'exynos2100',
     'samsung',
+    namespace_imports=namespace_imports,
 )
 
 if __name__ == '__main__':

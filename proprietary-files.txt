@@ -1,0 +1,5 @@
+# Proprietary files - from Samsung package version G991BOXMHHYJ1, unless pinned
+
+## Wi-Fi
+vendor/etc/init/wifi.rc
+vendor/etc/init/wifi_brcm.rc

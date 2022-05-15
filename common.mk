@@ -59,6 +59,7 @@ PRODUCT_PACKAGES += \
 $(call soong_config_set,samsungVars,target_keymaster4_library,//vendor/samsung/exynos2100:libskeymaster4device)
 
 # Kernel
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := true
 PRODUCT_ENABLE_UFFD_GC := true
 
 # init

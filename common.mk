@@ -51,6 +51,11 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl:64 \
     android.hardware.gatekeeper@1.0-service
 
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.0-service.samsung \
+    libkeymaster4_1support.vendor:64
+
 # init
 PRODUCT_PACKAGES += \
     init.exynos2100 \

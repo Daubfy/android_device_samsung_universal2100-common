@@ -4,6 +4,12 @@
 vendor/lib/hw/gatekeeper.exynos2100.so
 vendor/lib64/hw/gatekeeper.exynos2100.so
 
+## Keymaster
+vendor/bin/hw/android.hardware.keymaster@4.0_strongbox-service
+vendor/etc/init/android.hardware.keymaster@4.0_strongbox-service.rc
+vendor/lib64/libkeymaster_helper.so
+vendor/lib64/libskeymaster4device.so
+
 ## RIL
 vendor/bin/cbd
 vendor/bin/cass

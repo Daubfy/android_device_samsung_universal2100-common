@@ -139,6 +139,10 @@ VENDOR_SECURITY_PATCH := 2025-09-01
 ENABLE_VENDOR_RIL_SERVICE := true
 
 ## SELinux
+BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
+BOARD_SEPOLICY_TEE_FLAVOR := teegris
+include device/samsung_slsi/sepolicy/sepolicy.mk
+
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 
 ## Verified Boot

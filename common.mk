@@ -101,6 +101,14 @@ PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
 
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb-service.samsung
+
+PRODUCT_PACKAGES += \
+    android.hardware.usb.accessory.prebuilt.xml \
+    android.hardware.usb.host.prebuilt.xml
+
 # Vendor service manager
 PRODUCT_PACKAGES += \
     vndservicemanager

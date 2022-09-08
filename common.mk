@@ -58,6 +58,10 @@ PRODUCT_PACKAGES += \
 
 $(call soong_config_set,samsungVars,target_keymaster4_library,//vendor/samsung/exynos2100:libskeymaster4device)
 
+# Weaver
+PRODUCT_PACKAGES += \
+    android.hardware.weaver@1.0.vendor:64
+
 # init
 PRODUCT_PACKAGES += \
     init.exynos2100 \

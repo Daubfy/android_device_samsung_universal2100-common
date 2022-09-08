@@ -68,6 +68,10 @@ vendor/lib64/libprofileparamstorage.so
 vendor/lib64/libspatializerparamstorage.so
 vendor/lib64/libsecaudiocoreutils.so
 
+## soundtrigger
+vendor/lib/hw/sound_trigger.primary.exynos2100.so
+vendor/lib64/hw/sound_trigger.primary.exynos2100.so
+
 ## Audio firmware
 vendor/firmware/APBiBF_AUDIO_SLSI.bin
 vendor/firmware/avsyncmix.bin

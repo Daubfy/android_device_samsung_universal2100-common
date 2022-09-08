@@ -96,3 +96,4 @@
 /(vendor|system/vendor)/bin/hw/gps.sh                                                              u:object_r:gpsd_exec:s0
 /(vendor|system/vendor)/bin/hermesd                                                                u:object_r:hermesd_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.keymaster@[0-9]\.[0-9]_strongbox-service         u:object_r:hal_keymaster_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.samsung_slsi\.hardware\.SbwcDecompService@1\.0-service      u:object_r:hal_sbwcdecomp_default_exec:s0

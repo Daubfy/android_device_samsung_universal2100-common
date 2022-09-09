@@ -83,6 +83,10 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/samsung
 
+# Memtrack
+PRODUCT_PACKAGES += \
+    android.hardware.memtrack-service.samsung-mali
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power-service.pixel-libperfmgr

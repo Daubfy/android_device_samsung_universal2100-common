@@ -44,6 +44,8 @@ TARGET_KERNEL_CONFIG := \
     samsung/universal2100.config \
     samsung/$(TARGET_DEVICE).config
 
+TARGET_KERNEL_NO_GCC := true
+
 ## DTB & DTBO
 BOARD_DTB_CFG := $(COMMON_PATH)/configs/kernel/$(TARGET_SOC).cfg
 BOARD_DTBO_CFG := $(COMMON_PATH)/configs/kernel/$(TARGET_DEVICE).cfg

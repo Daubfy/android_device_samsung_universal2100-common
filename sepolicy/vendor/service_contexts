@@ -1,0 +1,3 @@
+# service_contexts
+
+vendor.nxp.nxpnfc_aidl.INxpNfc/default                 u:object_r:vendor_hal_nxpnfc_service:s0

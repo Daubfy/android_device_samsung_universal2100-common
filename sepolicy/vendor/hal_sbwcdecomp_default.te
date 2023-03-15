@@ -18,5 +18,5 @@ allow hal_sbwcdecomp_default graphics_device:chr_file { open read write ioctl };
 allow hal_sbwcdecomp_default ion_device:dir { search };
 allow hal_sbwcdecomp_default ion_device:chr_file { open read write ioctl };
 
-allow { appdomain -isolated_app } hal_sbwcdecomp_hwservice:hwservice_manager find;
-allow { appdomain -isolated_app } hal_sbwcdecomp_default:binder call;
+allow { appdomain -isolated_app_all } hal_sbwcdecomp_hwservice:hwservice_manager find;
+allow { appdomain -isolated_app_all } hal_sbwcdecomp_default:binder call;

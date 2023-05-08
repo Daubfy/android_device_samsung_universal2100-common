@@ -83,9 +83,11 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider-service.samsung \
-    libsensorndkbridge
+    libsensorndkbridge \
+    libhwjpeg
 
 $(call soong_config_set,samsungCameraVars,usage_64bit,true)
+$(call soong_config_set,libhwjpeg,HWJPEG_ANDROID_VERSION,11)
 
 PRODUCT_PACKAGES += \
     android.hardware.camera.concurrent.prebuilt.xml \

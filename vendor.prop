@@ -85,6 +85,7 @@ ro.surface_flinger.vsync_event_phase_offset_ns=0
 ro.surface_flinger.vsync_sf_event_phase_offset_ns=0
 
 ## HWC
+vendor.hwc.exynos.vsync_mode=0
 ro.vendor.hw.use_hwc_cpu_perf_mode=1
 ro.vendor.hw.use_virtual_display=1
 ro.vendor.hw.use_disable_composition_type_gles=1

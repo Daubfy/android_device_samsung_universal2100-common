@@ -342,6 +342,9 @@ vendor/lib/libsecnativefeature.so
 vendor/lib64/libfloatingfeature.so
 vendor/lib64/libsecnativefeature.so
 
+## Samsung wireless charger (MFC)
+vendor/firmware/mfc/mfc_fw_flash.bin
+
 ## Secure element
 vendor/bin/hw/android.hardware.secure_element@1.2-service
 vendor/etc/init/android.hardware.secure_element@1.2-service.rc

@@ -14,6 +14,7 @@
 
         <!-- Should "4G" be shown instead of "LTE" when the network is NETWORK_TYPE_LTE? -->
         <boolean name="show_4g_for_lte_data_icon_bool" value="true" />
+        <boolean name="show_4glte_for_lte_data_icon_bool" value="false"/>
 
         <!-- This device implements a noise suppression device for in call audio-->
         <bool name="has_in_call_noise_suppression">true</bool>

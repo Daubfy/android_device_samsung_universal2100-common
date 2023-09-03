@@ -33,6 +33,8 @@ genfscon sysfs /devices/platform/samsung_mobile_device/samsung_mobile_device:bat
 genfscon sysfs /devices/platform/samsung_mobile_device/samsung_mobile_device:battery/power_supply/usb/type                            u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/samsung_mobile_device/samsung_mobile_device:battery/power_supply/wireless/type                       u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/samsung_mobile_device/samsung_mobile_device:sec-direct-charger/power_supply/sec-direct-charger/type  u:object_r:sysfs_battery:s0
+genfscon sysfs /devices/platform/samsung_mobile_device/samsung_mobile_device:battery/power_supply/battery/wc_tx_en                    u:object_r:sysfs_battery_writable:s0
+genfscon sysfs /devices/platform/samsung_mobile_device/samsung_mobile_device:battery/power_supply/battery/wc_tx_stop_capacity         u:object_r:sysfs_battery_writable:s0
 genfscon sysfs /devices/platform/samsung_mobile_device/samsung_mobile_device:battery/power_supply/battery/batt_slate_mode             u:object_r:sysfs_battery_writable:s0
 
 # Chip id
@@ -77,8 +79,7 @@ genfscon sysfs /devices/platform/panel_drv_0/lcd/panel/cell_id                  
 genfscon sysfs /devices/platform/exynos-ufcc/ucc/cstate_control                              u:object_r:sysfs_power_writable:s0
 genfscon sysfs /devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/min_freq  u:object_r:sysfs_power_writable:s0
 genfscon sysfs /devices/platform/18500000.mali/power_policy                                  u:object_r:sysfs_power_writable:s0
-genfscon sysfs /devices/platform/105d0000.hsi2c/i2c-4/4-004b/input/input2/enable             u:object_r:sysfs_power_writable:s0
-genfscon sysfs /class/sec/tsp/input/enabled                                                  u:object_r:sysfs_power_writable:s0
+genfscon sysfs /devices/platform/105d0000.hsi2c/i2c-4/4-004b/input/input2/enabled            u:object_r:sysfs_power_writable:s0
 
 # mem_boost
 genfscon sysfs /kernel/mm/vmscan/mem_boost_mode                                        u:object_r:sysfs_mem_boost_writable:s0

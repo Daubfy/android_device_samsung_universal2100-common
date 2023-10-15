@@ -14,6 +14,7 @@ ro.frp.pst=/dev/block/persistent
 
 ## Graphics
 ro.hardware.vulkan=mali
+ro.hardware.egl=mali
 ro.opengles.version=196610
 
 ## SurfaceFlinger

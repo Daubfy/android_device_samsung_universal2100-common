@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2020 LineageOS Project
+ * Copyright (C) 2023 LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@
 
 #include <ALooper.h>
 
-#define LOG_TAG "libshim_sensorndkbridge"
+#define LOG_TAG "libsensorndkbridge_shim"
 #include <android-base/logging.h>
 
 using android::Mutex;

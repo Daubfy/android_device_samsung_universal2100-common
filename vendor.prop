@@ -139,5 +139,8 @@ ro.vendor.cscsupported=1
 ro.soc.manufacturer=Samsung
 ro.soc.model=Exynos 2100
 
+## Verity
+ro.apk_verity.mode=2
+
 ## Zygote
 zygote.critical_window.minute=10

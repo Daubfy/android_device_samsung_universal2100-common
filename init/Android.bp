@@ -54,3 +54,11 @@ prebuilt_etc {
     filename: "ueventd.rc",
     vendor: true,
 }
+
+prebuilt_root {
+    name: "init.recovery.exynos2100",
+    src: "init.exynos2100.recovery.rc",
+    filename: "init.recovery.exynos2100.rc",
+    install_in_root: true,
+    recovery: true,
+}

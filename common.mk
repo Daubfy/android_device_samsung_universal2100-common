@@ -39,6 +39,7 @@ PRODUCT_PACKAGES += \
     init.exynos2100 \
     init.usb.exynos2100 \
     init.ueventd.exynos2100 \
+    init.recovery.exynos2100 \
     fstab.exynos2100.etc \
     fstab.exynos2100.vendor_ramdisk \
     fstab.exynos2100.ramdisk

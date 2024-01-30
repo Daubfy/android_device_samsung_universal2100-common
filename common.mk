@@ -85,6 +85,8 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider-service.samsung \
     libsensorndkbridge
 
+$(call soong_config_set,samsungCameraVars,usage_64bit,true)
+
 PRODUCT_PACKAGES += \
     android.hardware.camera.concurrent.prebuilt.xml \
     android.hardware.camera.flash-autofocus.prebuilt.xml \

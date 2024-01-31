@@ -309,6 +309,14 @@ PRODUCT_COPY_FILES += \
 AB_OTA_UPDATER := false
 PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
 
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal-service.pixel \
+    thermal_symlinks
+
+PRODUCT_PACKAGES += \
+    thermal_info_config.exynos2100
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.samsung \

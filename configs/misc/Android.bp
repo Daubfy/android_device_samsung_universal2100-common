@@ -22,3 +22,10 @@ prebuilt_etc {
     src: "sehradiomanager.conf",
     filename: "sehradiomanager.conf",
 }
+
+prebuilt_etc {
+    name: "thermal_info_config.exynos2100",
+    defaults: ["misc_etc_defaults.exynos2100"],
+    src: "thermal_info_config.json",
+    filename: "thermal_info_config.json",
+}

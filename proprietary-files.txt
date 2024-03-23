@@ -216,6 +216,18 @@ vendor/firmware/libivp.elf
 vendor/firmware/liblog.elf
 vendor/firmware/secure_configuration.flm.cfg.bin
 
+## NFC
+vendor/bin/hw/nxp.android.hardware.nfc@1.2-service
+vendor/etc/init/nxp.android.hardware.nfc@1.2-service.rc
+vendor/etc/vintf/manifest/nxp.android.hardware.nfc@1.2-service.xml
+vendor/etc/nfc/libnfc-nxp_RF.conf
+vendor/etc/libese-nxp.conf
+vendor/etc/libnfc-nxp.conf
+vendor/firmware/nfc/libsn100u_fw.so:vendor/lib64/libsn100u_fw.so
+vendor/lib64/ese_spi_nxp.so
+vendor/lib64/nfc_nci_nxpsn.so
+vendor/lib64/vendor.samsung.hardware.nfc@2.0.so
+
 ## Fingerprint
 vendor/lib/libbauthserver.so
 vendor/lib/libbauthtzcommon.so
@@ -306,6 +318,17 @@ vendor/lib/libsecnativefeature.so
 vendor/lib64/libfloatingfeature.so
 vendor/lib64/libsecnativefeature.so
 
+## Secure element
+vendor/bin/hw/android.hardware.secure_element@1.2-service
+vendor/etc/init/android.hardware.secure_element@1.2-service.rc
+vendor/lib/libsec_semRil.so
+vendor/lib64/libsec_semRil.so
+
+## Sensors
+vendor/etc/sensors/hals.conf
+vendor/lib/sensors.flicker.so
+vendor/lib64/sensors.flicker.so
+
 ## Teegris
 vendor/bin/tzdaemon
 vendor/bin/tzts_daemon
@@ -320,11 +343,6 @@ vendor/tee/00000000-0000-0000-0000-42494f535542
 vendor/tee/00000000-0000-0000-0000-6d706f667376
 vendor/tee/driver/18d9f073-18a5-4ade-9def-875e07f7f293_
 vendor/tee/tui/resolution_common/ID00000100
-
-## Sensors
-vendor/etc/sensors/hals.conf
-vendor/lib/sensors.flicker.so
-vendor/lib64/sensors.flicker.so
 
 ## Wi-Fi
 vendor/etc/init/wifi.rc

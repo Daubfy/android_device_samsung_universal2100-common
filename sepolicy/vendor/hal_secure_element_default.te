@@ -1,0 +1,12 @@
+# Allow secure element HAL to access secure_element_device
+allow hal_secure_element_default secure_element_device:chr_file rw_file_perms;
+
+init_daemon_domain(hal_secure_element_default)
+unix_socket_connect(hal_secure_element_default, property, rild)
+
+# Allow binder call to system_suspend
+binder_call(hal_secure_element_default, system_suspend_server)
+allow hal_secure_element_default system_suspend_server:fd use;
+
+# Allow secure element HAL to write vendor_sehal_init_prop
+set_prop(hal_secure_element_default, vendor_sehal_init_prop)

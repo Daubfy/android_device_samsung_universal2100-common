@@ -63,6 +63,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.nfc.exynos2100",
+    defaults: ["init_etc_defaults.exynos2100"],
+    src: "init.nfc.rc",
+    filename: "init.nfc.rc",
+}
+
+prebuilt_etc {
     name: "init.ueventd.exynos2100",
     src: "ueventd.exynos2100.rc",
     filename: "ueventd.rc",

@@ -17,6 +17,9 @@ allow vendor_init ssm_efs_file:file getattr;
 get_prop(vendor_init, vts_status_prop)
 set_prop(vendor_init, vendor_cbd_prop)
 set_prop(vendor_init, vendor_hwc_prop)
+set_prop(vendor_init, vendor_sec_nfc_prop)
+set_prop(vendor_init, vendor_securehw_prop)
+set_prop(vendor_init, vendor_securenvm_prop)
 
 dontaudit vendor_init { default_prop system_prop build_prop }:property_service set;
 

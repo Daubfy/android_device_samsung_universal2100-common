@@ -117,6 +117,8 @@ blob_fixups: blob_fixups_user_type = {
        'vendor/lib64/libaudioparamupdate.so',
    ): blob_fixup()
         .replace_needed('libaudioroute.so', 'libaudioroute_exynos2100.so'),
+    'vendor/etc/libnfc-nci.conf': blob_fixup()
+        .regex_replace('/data/nfc', '/data/vendor/nfc'),
     'vendor/bin/hermesd': blob_fixup()
         .binary_regex_replace(
             b'security.securehw.available',

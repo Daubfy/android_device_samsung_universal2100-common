@@ -211,6 +211,7 @@ PRODUCT_PACKAGES += \
     init.usb.exynos2100 \
     init.ueventd.exynos2100 \
     init.recovery.exynos2100 \
+    init.nfc.exynos2100 \
     init.fingerprint.exynos2100 \
     fstab.exynos2100.etc \
     fstab.exynos2100.vendor_ramdisk \
@@ -252,6 +253,24 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor \
     libtextclassifier_hash.vendor
+
+# NFC
+PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.2.vendor \
+    android.hardware.secure_element@1.2.vendor \
+    com.android.nfc_extras \
+    libchrome.vendor \
+    nqnfcinfo \
+    Tag
+
+PRODUCT_PACKAGES += \
+    android.hardware.nfc.hcef.prebuilt.xml \
+    android.hardware.nfc.ese.prebuilt.xml \
+    android.hardware.nfc.hce.prebuilt.xml \
+    android.hardware.nfc.prebuilt.xml \
+    android.hardware.se.omapi.uicc.prebuilt.xml \
+    android.hardware.se.omapi.ese.prebuilt.xml \
+    com.nxp.mifare.prebuilt.xml
 
 # Memtrack
 PRODUCT_PACKAGES += \

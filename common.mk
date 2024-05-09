@@ -79,7 +79,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(COMMON_PATH) \
     hardware/broadcom/libbt \
+    hardware/google/interfaces \
+    hardware/google/pixel \
     hardware/samsung
+
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power-service.pixel-libperfmgr
 
 # RIL
 PRODUCT_PACKAGES += \

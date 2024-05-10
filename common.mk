@@ -113,6 +113,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint-service.samsung
+
+PRODUCT_PACKAGES += \
+    android.hardware.fingerprint.prebuilt.xml
+
 # Graphics
 PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl \
@@ -124,6 +131,7 @@ PRODUCT_PACKAGES += \
     libexynosgraphicbuffer_public \
     libion_exynos \
     libion
+
 # hw composer HAL
 PRODUCT_PACKAGES += \
     hwcomposer.$(TARGET_BOOTLOADER_BOARD_NAME)
@@ -175,6 +183,7 @@ PRODUCT_PACKAGES += \
     init.usb.exynos2100 \
     init.ueventd.exynos2100 \
     init.recovery.exynos2100 \
+    init.fingerprint.exynos2100 \
     fstab.exynos2100.etc \
     fstab.exynos2100.vendor_ramdisk \
     fstab.exynos2100.ramdisk

@@ -58,6 +58,9 @@ PRODUCT_SOONG_NAMESPACES += \
     $(COMMON_PATH) \
     hardware/samsung
 
+# Update
+PRODUCT_SOONG_NAMESPACES += bootable/deprecated-ota
+
 # Vendor service manager
 PRODUCT_PACKAGES += \
     vndservicemanager

@@ -89,7 +89,6 @@ vendor/lib64/libsensorlistener.so
 vendor/lib64/libuniapi.so
 vendor/lib64/libuniplugin.so
 vendor/lib64/libeis_core.so
-vendor/lib64/libvpl.so
 vendor/lib64/vendor.samsung.hardware.hyper-V2-ndk_platform.so
 vendor/lib64/vendor.samsung.hardware.thermal@1.0.so
 

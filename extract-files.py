@@ -57,6 +57,8 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libeden_ud_gpu.so': blob_fixup()
         .replace_needed('libOpenCL.so', 'libGLES_mali.so')
         .add_needed('libeden_ud_cpu.so'),
+    'vendor/lib64/libexynoscamera_plugin.so': blob_fixup()
+        .add_needed('libvpl.so'),
     'vendor/lib64/libsec-ril.so': blob_fixup()
         .replace_needed(
             'libprotobuf-cpp-full-21.7.so',

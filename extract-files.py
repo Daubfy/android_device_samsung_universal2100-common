@@ -92,7 +92,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libcrypto.so', 'libcrypto-v33.so')
         .add_needed('libshim_crypto.so'),
     'vendor/lib/libwvhidl.so': blob_fixup()
-        .replace_needed('libprotobuf-cpp-lite-3.9.1.so', 'libprotobuf-cpp-full-3.9.1.so'),
+        .replace_needed('libprotobuf-cpp-lite-3.9.1.so', 'libprotobuf-cpp-full-3.9.1.so')
+        .add_needed('libcrypto_shim.so'),
     (
         'vendor/lib/libFilmGrainNoise.so',
         'vendor/lib64/libFilmGrainNoise.so',

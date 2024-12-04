@@ -7,6 +7,7 @@
 COMMON_PATH := device/samsung/exynos2100
 
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+BUILD_BROKEN_DUP_RULES := true
 
 ## Architecture
 TARGET_ARCH := arm64

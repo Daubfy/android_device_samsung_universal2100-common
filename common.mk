@@ -132,6 +132,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
 
+# DOZE
+PRODUCT_PACKAGES += \
+    SamsungDoze
+
 # fastbootd
 PRODUCT_PACKAGES += \
     fastbootd

@@ -112,7 +112,10 @@ PRODUCT_PACKAGES += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb-service.samsung
+    android.hardware.usb-service.samsung \
+    android.hardware.usb.gadget-service.samsung
+
+$(call soong_config_set,samsungUsbGadgetVars,gadget_name,10e00000.usb)
 
 PRODUCT_PACKAGES += \
     android.hardware.usb.accessory.prebuilt.xml \

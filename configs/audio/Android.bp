@@ -1,0 +1,24 @@
+//
+// Copyright (C) 2025 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_defaults {
+    name: "audio_etc_defaults.exynos2100",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "audio_board_info.exynos2100",
+    defaults: ["audio_etc_defaults.exynos2100"],
+    src: "audio_board_info.xml",
+    filename: "audio_board_info.xml",
+}
+
+prebuilt_etc {
+    name: "audio_policy_config.exynos2100",
+    defaults: ["audio_etc_defaults.exynos2100"],
+    src: "audio_policy_configuration.xml",
+    filename: "audio_policy_configuration.xml",
+}

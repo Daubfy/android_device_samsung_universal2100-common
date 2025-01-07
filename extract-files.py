@@ -45,6 +45,32 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libskeymaster4device.so': blob_fixup()
         .replace_needed('libcrypto.so', 'libcrypto-v33.so')
         .add_needed('libshim_crypto.so'),
+    (
+        'vendor/lib/soundfx/libaudioeffectoffload.so',
+        'vendor/lib/hw/audio.primary.exynos2100.so',
+        'vendor/lib64/soundfx/libaudioeffectoffload.so'
+    ): blob_fixup()
+        .replace_needed('libaudioroute.so', 'libaudioroute_exynos2100.so')
+        .replace_needed('libtinyalsa.so', 'libtinyalsa_exynos2100.so'),
+   (
+       'vendor/lib/libaudioroute_exynos2100.so',
+       'vendor/lib64/libaudioroute_exynos2100.so',
+   ): blob_fixup()
+        .replace_needed('libtinyalsa.so', 'libtinyalsa_exynos2100.so'),
+   (
+       'vendor/lib/libaudioproxy2.so',
+       'vendor/lib64/libaudioproxy2.so',
+   ): blob_fixup()
+        .remove_needed('libhwbinder.so')
+        .replace_needed('libaudioroute.so', 'libaudioroute_exynos2100.so')
+        .replace_needed('libtinyalsa.so', 'libtinyalsa_exynos2100.so'),
+   (
+       'vendor/lib/hw/audio.primary.exynos2100.so',
+       'vendor/lib/libaboxpcmdump.so',
+       'vendor/lib/libaudioparamupdate.so',
+       'vendor/lib64/libaudioparamupdate.so',
+   ): blob_fixup()
+        .replace_needed('libaudioroute.so', 'libaudioroute_exynos2100.so'),
     'vendor/bin/hermesd': blob_fixup()
         .binary_regex_replace(
             b'security.securehw.available',

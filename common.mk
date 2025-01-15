@@ -34,6 +34,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl:32 \
     android.hardware.audio.service \
+    android.hardware.audio.effect@6.0-impl:32 \
     audio.bluetooth.default \
     android.hardware.bluetooth.audio-impl \
     audio.r_submix.default \

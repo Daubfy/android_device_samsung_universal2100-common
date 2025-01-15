@@ -48,6 +48,26 @@ vendor/lib/vndk/libaudioroute.so:vendor/lib/libaudioroute_exynos2100.so;FIX_SONA
 vendor/lib64/vndk/libtinyalsa.so:vendor/lib64/libtinyalsa_exynos2100.so;FIX_SONAME
 vendor/lib64/vndk/libaudioroute.so:vendor/lib64/libaudioroute_exynos2100.so;FIX_SONAME
 
+## Audio - Effects
+vendor/lib/soundfx/libmyspace.so
+vendor/lib/soundfx/libaudioeffectoffload.so
+vendor/lib/soundfx/libplaybackrecorder.so
+vendor/lib/lib_SoundAlive_play_plus_ver500.so
+vendor/lib/lib_SoundAlive_3DPosition_ver202.so
+vendor/lib/lib_SoundAlive_AlbumArt_ver105.so
+vendor/lib/libprofileparamstorage.so
+vendor/lib/libspatializerparamstorage.so
+vendor/lib/libsecaudiocoreutils.so
+vendor/lib64/soundfx/libmyspace.so
+vendor/lib64/soundfx/libaudioeffectoffload.so
+vendor/lib64/soundfx/libplaybackrecorder.so
+vendor/lib64/lib_SoundAlive_play_plus_ver500.so
+vendor/lib64/lib_SoundAlive_3DPosition_ver202.so
+vendor/lib64/lib_SoundAlive_AlbumArt_ver105.so
+vendor/lib64/libprofileparamstorage.so
+vendor/lib64/libspatializerparamstorage.so
+vendor/lib64/libsecaudiocoreutils.so
+
 ## Audio firmware
 vendor/firmware/APBiBF_AUDIO_SLSI.bin
 vendor/firmware/avsyncmix.bin

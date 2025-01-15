@@ -17,6 +17,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "audio_effects.exynos2100",
+    defaults: ["audio_etc_defaults.exynos2100"],
+    src: "audio_effects.xml",
+    filename: "audio_effects.xml",
+}
+
+prebuilt_etc {
     name: "audio_policy_config.exynos2100",
     defaults: ["audio_etc_defaults.exynos2100"],
     src: "audio_policy_configuration.xml",

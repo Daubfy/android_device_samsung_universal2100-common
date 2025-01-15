@@ -1,6 +1,7 @@
 ## vendor.prop for exynos2100
 
 ## Audio
+ro.audio.spatializer_enabled=true
 audio.offload.min.duration.secs=30
 aaudio.mmap_policy=2
 aaudio.mmap_exclusive_policy=2

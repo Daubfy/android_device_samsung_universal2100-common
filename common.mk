@@ -162,7 +162,8 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/broadcom/libbt \
     hardware/google/interfaces \
     hardware/google/pixel \
-    hardware/samsung
+    hardware/samsung \
+    hardware/samsung_slsi-linaro/exynos/gralloc/gralloc4
 
 # Sensors
 PRODUCT_PACKAGES += \

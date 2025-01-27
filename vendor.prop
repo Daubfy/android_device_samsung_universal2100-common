@@ -38,6 +38,10 @@ ro.vendor.hw.use_secure_encoder_only=1
 ## DRM (MediaDrm)
 drm.service.enabled=true
 
+## RIL
+vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
+ro.telephony.default_network=9,9
+
 ## Samsung specific
 ro.product_ship=true
 # Set csc support in OMX

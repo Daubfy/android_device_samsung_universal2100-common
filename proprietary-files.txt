@@ -1,5 +1,45 @@
 # Proprietary files - from Samsung package version G991BOXMHHYJ1, unless pinned
 
+## RIL
+vendor/bin/cbd
+vendor/bin/cass
+vendor/bin/hw/rild
+vendor/etc/init/cass.rc
+vendor/etc/init/init.baseband.rc
+vendor/etc/init/init.vendor.onebinary.rc
+vendor/etc/init/init.vendor.rilcommon.rc
+vendor/etc/init/vendor.samsung.rild.rc
+vendor/etc/vintf/manifest/vendor.samsung.hardware.sehradio_manifest_2_30.xml
+vendor/etc/vintf/manifest/vendor.samsung.hardware.radio_manifest_2_30.xml
+vendor/lib/libsecril-client.so
+vendor/lib/libsemnativecarrierfeature.so
+vendor/lib64/libril_sem.so
+vendor/lib64/libsec-ril.so
+vendor/lib64/libsecril-client.so
+vendor/lib64/libsemnativecarrierfeature.so
+vendor/lib64/libVendorSemDataProps.so
+vendor/lib64/libVendorSemTelephonyProps.so
+vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
+vendor/lib64/vendor.samsung.hardware.radio.bridge@2.1.so
+vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
+
+## RIL Dependencies
+vendor/etc/mtu-conf.xml
+vendor/etc/plmn_delta.bin
+vendor/etc/plmn_delta_attaio.bin
+vendor/etc/plmn_delta_hktw.bin
+vendor/etc/plmn_delta_ltn.bin
+vendor/etc/plmn_delta_usagsm.bin
+vendor/etc/plmn_se13_prebuilt.bin
+vendor/lib64/libengmode_client.so
+vendor/lib64/libvkmanager_vendor.so
+
+## Misc
+vendor/lib/libfloatingfeature.so
+vendor/lib/libsecnativefeature.so
+vendor/lib64/libfloatingfeature.so
+vendor/lib64/libsecnativefeature.so
+
 ## Teegris
 vendor/bin/tzdaemon
 vendor/bin/tzts_daemon

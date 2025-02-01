@@ -68,11 +68,6 @@ blob_fixups: blob_fixups_user_type = {
             b'persist.ril.supportNrModefromCp',
             b'vendor.ril.supportNrModefromCp\x00'
         ),
-    (
-        'vendor/lib64/ese_spi_nxp.so',
-        'vendor/lib64/nfc_nci_nxpsn.so'
-    ): blob_fixup()
-        .add_needed('libbase_shim.so'),
     'vendor/lib64/libsensorlistener.so': blob_fixup()
         .add_needed('libsensorndkbridge_shim.so')
         .add_needed('libutils-v32.so')

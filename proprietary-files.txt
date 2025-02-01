@@ -170,15 +170,7 @@ vendor/firmware/liblog.elf
 vendor/firmware/secure_configuration.flm.cfg.bin
 
 ## NFC
-vendor/bin/hw/nxp.android.hardware.nfc@1.2-service
-vendor/etc/init/nxp.android.hardware.nfc@1.2-service.rc
-vendor/etc/vintf/manifest/nxp.android.hardware.nfc@1.2-service.xml
-vendor/etc/libese-nxp.conf
-vendor/etc/libnfc-nxp.conf
 vendor/firmware/nfc/libsn100u_fw.so:vendor/lib64/libsn100u_fw.so
-vendor/lib64/ese_spi_nxp.so
-vendor/lib64/nfc_nci_nxpsn.so
-vendor/lib64/vendor.samsung.hardware.nfc@2.0.so
 
 ## Gatekeeper
 vendor/lib64/hw/gatekeeper.exynos2100.so
@@ -278,8 +270,6 @@ vendor/lib64/libsecnativefeature.so
 vendor/firmware/mfc/mfc_fw_flash.bin
 
 ## Secure element
-vendor/bin/hw/android.hardware.secure_element@1.2-service
-vendor/etc/init/android.hardware.secure_element@1.2-service.rc
 vendor/lib64/libsec_semRil.so
 
 ## Sensors

@@ -286,9 +286,16 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
+    android.hardware.nfc-service.nxp
+
+PRODUCT_PACKAGES += \
     com.android.nfc_extras \
-    nqnfcinfo \
     Tag
+
+PRODUCT_PACKAGES += \
+    libnfc-nci.exynos2100 \
+    libnfc-nxp.exynos2100 \
+    libese-nxp.exynos2100
 
 PRODUCT_PACKAGES += \
     android.hardware.nfc.hcef.prebuilt.xml \
@@ -298,6 +305,9 @@ PRODUCT_PACKAGES += \
     android.hardware.se.omapi.uicc.prebuilt.xml \
     android.hardware.se.omapi.ese.prebuilt.xml \
     com.nxp.mifare.prebuilt.xml
+
+# Secure Element
+PRODUCT_PACKAGES += android.hardware.secure_element-service.nxp
 
 # Memtrack
 PRODUCT_PACKAGES += \

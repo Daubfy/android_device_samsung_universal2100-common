@@ -1,0 +1,31 @@
+//
+// Copyright (C) 2025 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_defaults {
+    name: "nfc_etc_defaults.exynos2100",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "libnfc-nci.exynos2100",
+    defaults: ["nfc_etc_defaults.exynos2100"],
+    src: "libnfc-nci.conf",
+    filename: "libnfc-nci.conf",
+}
+
+prebuilt_etc {
+    name: "libnfc-nxp.exynos2100",
+    defaults: ["nfc_etc_defaults.exynos2100"],
+    src: "libnfc-nxp.conf",
+    filename: "libnfc-nxp.conf",
+}
+
+prebuilt_etc {
+    name: "libese-nxp.exynos2100",
+    defaults: ["nfc_etc_defaults.exynos2100"],
+    src: "libese-nxp.conf",
+    filename: "libese-nxp.conf",
+}

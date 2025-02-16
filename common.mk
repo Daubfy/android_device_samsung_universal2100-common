@@ -228,6 +228,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/samsung \
+    hardware/samsung_slsi-linaro/exynos/cpboot_v3 \
     hardware/samsung_slsi-linaro/exynos/gralloc/gralloc4
 
 # Sensors
@@ -263,8 +264,11 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
+    cbd \
     secril_config_svc \
     sehradiomanager
+
+$(call soong_config_set,cbd,protocol,sipc)
 
 PRODUCT_PACKAGES += \
     android.hardware.telephony.gsm.prebuilt.xml \

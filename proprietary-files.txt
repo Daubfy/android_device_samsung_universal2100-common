@@ -265,7 +265,6 @@ vendor/lib64/libkeymaster_helper.so
 vendor/lib64/libskeymaster4device.so
 
 ## RIL
-vendor/bin/cbd
 vendor/bin/cass
 vendor/bin/hw/rild
 vendor/etc/init/cass.rc

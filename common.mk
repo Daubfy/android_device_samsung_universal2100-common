@@ -58,6 +58,9 @@ PRODUCT_PACKAGES += \
 
 $(call soong_config_set,samsungVars,target_keymaster4_library,//vendor/samsung/exynos2100:libskeymaster4device)
 
+# Kernel
+PRODUCT_ENABLE_UFFD_GC := true
+
 # init
 PRODUCT_PACKAGES += \
     init.exynos2100 \

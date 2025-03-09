@@ -56,6 +56,8 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0-service.samsung \
     libkeymaster4_1support.vendor:64
 
+$(call soong_config_set,samsungVars,target_keymaster4_library,//vendor/samsung/exynos2100:libskeymaster4device)
+
 # init
 PRODUCT_PACKAGES += \
     init.exynos2100 \

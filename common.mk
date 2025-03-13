@@ -71,6 +71,10 @@ PRODUCT_PACKAGES += \
 
 $(call soong_config_set,brcm_libbt,custom_bt_config,//$(COMMON_PATH):exynos2100.txt)
 
+# Charger
+PRODUCT_PACKAGES += \
+    charger_res_images_vendor
+
 # ConfigStore
 PRODUCT_PACKAGES += \
     disable_configstore

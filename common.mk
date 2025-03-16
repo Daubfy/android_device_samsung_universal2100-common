@@ -87,6 +87,9 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     android.hardware.power-service.pixel-libperfmgr
 
+PRODUCT_PACKAGES += \
+    powerhint.json.exynos2100
+
 # RIL
 PRODUCT_PACKAGES += \
     secril_config_svc \

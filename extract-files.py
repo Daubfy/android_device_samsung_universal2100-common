@@ -72,6 +72,11 @@ blob_fixups: blob_fixups_user_type = {
             b'vendor.ril.supportNrModefromCp\x00'
         ),
     (
+        'vendor/lib64/ese_spi_nxp.so',
+        'vendor/lib64/nfc_nci_nxpsn.so'
+    ): blob_fixup()
+        .add_needed('libbase_shim.so'),
+    (
         'vendor/lib/libsensorlistener.so',
         'vendor/lib/libvdis_core.so',
         'vendor/lib64/libsensorlistener.so',

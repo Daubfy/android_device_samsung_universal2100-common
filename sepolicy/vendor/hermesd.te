@@ -15,6 +15,8 @@ allow hermesd ssp_device:chr_file rw_file_perms;
 # Allow hermesd to access tee tz_user_device
 allow hermesd tz_user_device:chr_file rw_file_perms;
 
+allow hermesd self:capability2 wake_alarm;
+
 get_prop(hermesd, vendor_tztsdaemon_prop)
 set_prop(hermesd, vendor_securenvm_prop)
 set_prop(hermesd, vendor_securehw_prop)

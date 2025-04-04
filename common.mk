@@ -49,6 +49,9 @@ PRODUCT_PACKAGES += \
 TARGET_EXCLUDES_AUDIOFX := true
 
 PRODUCT_PACKAGES += \
+    SamsungDAP
+
+PRODUCT_PACKAGES += \
     audio_board_info.exynos2100 \
     audio_effects.exynos2100 \
     audio_policy_config.exynos2100

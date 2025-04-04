@@ -33,6 +33,9 @@ ro.hardware.keystore=mdfpp
 ro.hardware.keystore_desede=true
 ro.security.keystore.keytype=sakv2,gak,sgak,
 
+## Display
+ro.vendor.ddk.set.afbc=1
+
 ## Graphics
 ro.hardware.vulkan=mali
 ro.hardware.egl=mali

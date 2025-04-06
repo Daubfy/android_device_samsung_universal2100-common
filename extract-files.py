@@ -51,10 +51,7 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libnpuc_template.so',
     ): blob_fixup()
         .add_needed('liblog.so'),
-    (
-        'vendor/lib/libeden_ud_gpu.so',
-        'vendor/lib64/libeden_ud_gpu.so',
-    ): blob_fixup()
+    'vendor/lib64/libeden_ud_gpu.so': blob_fixup()
         .replace_needed('libOpenCL.so', 'libGLES_mali.so')
         .add_needed('libeden_ud_cpu.so'),
     'vendor/lib64/libsec-ril.so': blob_fixup()
@@ -76,12 +73,7 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/nfc_nci_nxpsn.so'
     ): blob_fixup()
         .add_needed('libbase_shim.so'),
-    (
-        'vendor/lib/libsensorlistener.so',
-        'vendor/lib/libvdis_core.so',
-        'vendor/lib64/libsensorlistener.so',
-        'vendor/lib64/libvdis_core.so',
-    ): blob_fixup()
+    'vendor/lib64/libsensorlistener.so': blob_fixup()
         .add_needed('libsensorndkbridge_shim.so')
         .add_needed('libutils-v32.so')
         .binary_regex_replace(
@@ -94,10 +86,7 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib/libwvhidl.so': blob_fixup()
         .replace_needed('libprotobuf-cpp-lite-3.9.1.so', 'libprotobuf-cpp-full-3.9.1.so')
         .add_needed('libcrypto_shim.so'),
-    (
-        'vendor/lib/libFilmGrainNoise.so',
-        'vendor/lib64/libFilmGrainNoise.so',
-    ): blob_fixup()
+    'vendor/lib64/libFilmGrainNoise.so': blob_fixup()
         .replace_needed('libOpenCL.so', 'libGLES_mali.so'),
     (
         'vendor/lib/soundfx/libaudioeffectoffload.so',

@@ -771,6 +771,9 @@ on boot
     chmod 0664 /dev/cpuset/moderate/tasks
     chmod 0664 /dev/cpuset/moderate/cpus
 
+    # ZRAM
+    write /proc/sys/vm/swappiness 60
+
     # LPM Info
     chown system system /efs/lpm_info.log
     chmod 0660 /efs/lpm_info.log
@@ -934,7 +937,7 @@ on early-fs
 on late-fs
 #   wait_for_prop vendor.sys.mobicoredaemon.enable true
     mount_all /vendor/etc/fstab.${ro.hardware} --late
-#    swapon_all /vendor/etc/fstab.${ro.hardware}
+    swapon_all /vendor/etc/fstab.${ro.hardware}
 
     # mAFPC
     exec - system system -- /system/bin/mafpc_write

@@ -311,7 +311,7 @@ PRODUCT_PACKAGES += \
 
 # PowerShare
 PRODUCT_PACKAGES += \
-    vendor.lineage.powershare@1.0-service.samsung
+    vendor.lineage.powershare-service.samsung
 
 # RIL
 PRODUCT_PACKAGES += \

@@ -323,6 +323,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vndservicemanager
 
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator-service.samsung
+
 # Weaver
 PRODUCT_PACKAGES += \
     android.hardware.weaver@1.0.vendor:64

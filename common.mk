@@ -58,10 +58,6 @@ PRODUCT_PACKAGES += \
 
 $(call soong_config_set,samsungVars,target_keymaster4_library,//vendor/samsung/exynos2100:libskeymaster4device)
 
-# Weaver
-PRODUCT_PACKAGES += \
-    android.hardware.weaver@1.0.vendor:64
-
 # init
 PRODUCT_PACKAGES += \
     init.exynos2100 \
@@ -74,6 +70,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/init/fstab.exynos2100:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.exynos2100
+
+# Light
+PRODUCT_PACKAGES += \
+    android.hardware.light-service.samsung
 
 # Soong Namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -124,6 +124,10 @@ PRODUCT_PACKAGES += \
 # Vendor service manager
 PRODUCT_PACKAGES += \
     vndservicemanager
+
+# Weaver
+PRODUCT_PACKAGES += \
+    android.hardware.weaver@1.0.vendor:64
 
 # WiFi
 PRODUCT_PACKAGES += \

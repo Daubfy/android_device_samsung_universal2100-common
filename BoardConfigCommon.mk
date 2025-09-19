@@ -30,6 +30,9 @@ BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_CUSTOM_BT_CONFIG := $(COMMON_PATH)/bluetooth/libbt_vndcfg.txt
 
+## Display
+BOARD_MINIMUM_DISPLAY_BRIGHTNESS := 1
+
 ## Platform
 BOARD_VENDOR := samsung
 TARGET_BOARD_PLATFORM := universal2100

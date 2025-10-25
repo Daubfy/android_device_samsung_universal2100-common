@@ -210,6 +210,7 @@ PRODUCT_PACKAGES += \
     init.samsung \
     init.usb.exynos2100 \
     init.ueventd.exynos2100 \
+    init.udfps.exynos2100 \
     init.recovery.exynos2100 \
     init.nfc.exynos2100 \
     init.fingerprint.exynos2100 \

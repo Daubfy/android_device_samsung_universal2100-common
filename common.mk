@@ -101,6 +101,29 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.autofocus.xml \
     frameworks/native/data/etc/android.hardware.camera.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.xml
 
+# Codec2
+PRODUCT_PACKAGES += \
+    samsung.hardware.media.c2@1.2-service \
+    libExynosC2H264Dec \
+    libExynosC2H264Enc \
+    libExynosC2HevcDec \
+    libExynosC2HevcEnc \
+    libExynosC2Vp8Dec \
+    libExynosC2Vp8Enc \
+    libExynosC2Vp9Dec \
+    libExynosC2Vp9Enc \
+    libExynosC2Av1Dec
+
+PRODUCT_PACKAGES += \
+    codec2.vendor.base.policy \
+    codec2.vendor.ext.policy
+
+# Media
+PRODUCT_PACKAGES += \
+    media_codecs_c2.exynos2100 \
+    media_codecs_performance_c2.exynos2100 \
+    media_profiles_V1_0.exynos2100
+
 # ConfigStore
 PRODUCT_PACKAGES += \
     disable_configstore

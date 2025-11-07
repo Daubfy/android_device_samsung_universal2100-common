@@ -136,6 +136,12 @@ vendor/firmware/clFGN8BitYV12_32.bin
 vendor/firmware/clFGN8BitYV12_64.bin
 vendor/firmware/libgaussian3x3.elf
 
+## Codec2
+vendor/lib/libFilmGrainNoise.so
+vendor/lib/libImageFormatConverter.so
+vendor/lib64/libFilmGrainNoise.so
+vendor/lib64/libImageFormatConverter.so
+
 ## Fingerprint
 vendor/lib/libbauthserver.so
 vendor/lib/libbauthtzcommon.so

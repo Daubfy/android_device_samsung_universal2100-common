@@ -51,6 +51,16 @@ ro.vendor.hw.use_virtual_display=1
 ro.vendor.hw.use_disable_composition_type_gles=1
 ro.vendor.hw.use_secure_encoder_only=1
 
+## Codec2
+ro.vendor.gpu.dataspace=1
+debug.c2.use_dmabufheaps=1
+media.c2.dmabuf.padding=512
+debug.stagefright.c2-poolmask=786432
+debug.stagefright.ccodec_delayed_params=1
+debug.stagefright.ccodec_lax_type=true
+debug.stagefright.ccodec_strict_type=true
+vendor.media.omx=0
+
 ## DRM (MediaDrm)
 drm.service.enabled=true
 

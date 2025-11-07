@@ -57,6 +57,11 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libcrypto.so', 'libcrypto-v33.so')
         .add_needed('libshim_crypto.so'),
     (
+        'vendor/lib/libFilmGrainNoise.so',
+        'vendor/lib64/libFilmGrainNoise.so',
+    ): blob_fixup()
+        .replace_needed('libOpenCL.so', 'libGLES_mali.so'),
+    (
         'vendor/lib/soundfx/libaudioeffectoffload.so',
         'vendor/lib/hw/audio.primary.exynos2100.so',
         'vendor/lib64/soundfx/libaudioeffectoffload.so'

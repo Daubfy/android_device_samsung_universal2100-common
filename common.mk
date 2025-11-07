@@ -155,6 +155,9 @@ PRODUCT_PACKAGES += \
     libion_exynos \
     libion
 
+PRODUCT_PACKAGES += \
+    vendor.samsung_slsi.hardware.SbwcDecompService@1.0-service
+
 # hw composer HAL
 PRODUCT_PACKAGES += \
     hwcomposer.$(TARGET_BOOTLOADER_BOARD_NAME)

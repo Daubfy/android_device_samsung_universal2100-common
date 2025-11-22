@@ -94,8 +94,15 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.composer.hwc3-service.slsi \
+    libexynosgraphicbuffer_public \
     libion_exynos \
     libion
+
+$(call soong_config_set,arm_gralloc,gralloc_arm_no_external_afbc,false)
+$(call soong_config_set,arm_gralloc,mali_gpu_support_afbc_basic,true)
+$(call soong_config_set,arm_gralloc,gralloc_init_afbc,true)
+$(call soong_config_set,arm_gralloc,gralloc_ion_sync_on_lock,true)
+$(call soong_config_set,arm_gralloc,dpu_support_1010102_afbc,true)
 
 PRODUCT_PACKAGES += \
     android.hardware.vulkan.compute-0.prebuilt.xml \

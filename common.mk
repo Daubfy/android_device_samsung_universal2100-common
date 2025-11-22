@@ -6,6 +6,8 @@
 
 COMMON_PATH := device/samsung/exynos2100
 
+include $(COMMON_PATH)/BoardConfigCommon.mk
+
 # Inherit non-AB Device
 $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 
@@ -97,6 +99,9 @@ PRODUCT_PACKAGES += \
     libexynosgraphicbuffer_public \
     libion_exynos \
     libion
+# hw composer HAL
+PRODUCT_PACKAGES += \
+    hwcomposer.$(TARGET_BOOTLOADER_BOARD_NAME)
 
 $(call soong_config_set,arm_gralloc,gralloc_arm_no_external_afbc,false)
 $(call soong_config_set,arm_gralloc,mali_gpu_support_afbc_basic,true)

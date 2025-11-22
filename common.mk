@@ -18,3 +18,15 @@ BOARD_SHIPPING_API_LEVEL := 30
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# init
+PRODUCT_PACKAGES += \
+    init.exynos2100 \
+    init.usb.exynos2100 \
+    init.ueventd.exynos2100 \
+    fstab.exynos2100.etc \
+    fstab.exynos2100.vendor_ramdisk \
+    fstab.exynos2100.ramdisk
+
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/init/fstab.exynos2100:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.exynos2100

@@ -1,0 +1,56 @@
+//
+// Copyright (C) 2025 The LineageOS Project
+//
+
+prebuilt_defaults {
+    name: "init_etc_defaults.exynos2100",
+    vendor: true,
+    sub_dir: "init",
+}
+
+prebuilt_defaults {
+    name: "fstab.exynos2100_defaults",
+    src: "fstab.exynos2100",
+    filename: "fstab.exynos2100",
+}
+
+prebuilt_etc {
+    name: "fstab.exynos2100.etc",
+    defaults: ["fstab.exynos2100_defaults"],
+    vendor: true,
+}
+
+prebuilt_root {
+    name: "fstab.exynos2100.vendor_ramdisk",
+    defaults: ["fstab.exynos2100_defaults"],
+    install_in_root: true,
+    vendor_ramdisk: true,
+}
+
+prebuilt_root {
+    name: "fstab.exynos2100.ramdisk",
+    defaults: ["fstab.exynos2100_defaults"],
+    install_in_root: true,
+    ramdisk: true,
+}
+
+prebuilt_etc {
+    name: "init.exynos2100",
+    defaults: ["init_etc_defaults.exynos2100"],
+    src: "init.exynos2100.rc",
+    filename: "init.exynos2100.rc",
+}
+
+prebuilt_etc {
+    name: "init.usb.exynos2100",
+    defaults: ["init_etc_defaults.exynos2100"],
+    src: "init.exynos2100.usb.rc",
+    filename: "init.exynos2100.usb.rc",
+}
+
+prebuilt_etc {
+    name: "init.ueventd.exynos2100",
+    src: "ueventd.exynos2100.rc",
+    filename: "ueventd.rc",
+    vendor: true,
+}

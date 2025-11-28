@@ -5,7 +5,7 @@ get_prop(hal_camera_default, exported_camera_prop);
 set_prop(hal_camera_default, vendor_camera_prop);
 
 allow hal_camera_default hal_graphics_mapper_hwservice:hwservice_manager find;
-
+allow hal_camera_default efs_file:dir search;
 allow hal_camera_default sysfs_mem_boost_writable:file rw_file_perms;
 
 allow hal_camera_default jsqz_device:chr_file rw_file_perms;

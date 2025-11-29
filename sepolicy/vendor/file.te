@@ -7,6 +7,9 @@ type vendor_gatekeeper_data_file, file_type, data_file_type;
 type cpdebug_efs_file, file_type;
 type ssm_efs_file, file_type;
 
+# Audio
+type vendor_sysfs_cirrus_cal, fs_type, sysfs_type;
+
 # proc types
 type proc_swappiness, fs_type, proc_type;
 type proc_dirty_background_bytes, fs_type, proc_type;

@@ -8,6 +8,10 @@ genfscon proc /sys/kernel/sched_util_est_clamp                                  
 # ds_detect
 genfscon sysfs /devices/platform/cpif/sim/ds_detect	                                   u:object_r:sysfs_sim_writable:s0
 
+# Audio
+genfscon sysfs /devices/virtual/cirrus/cirrus_bd                                       u:object_r:vendor_sysfs_cirrus_cal:s0
+genfscon sysfs /devices/virtual/cirrus/cirrus_cal                                      u:object_r:vendor_sysfs_cirrus_cal:s0
+
 # Bluetooth
 genfscon sysfs /devices/platform/bluetooth/rfkill/rfkill2/state                        u:object_r:sysfs_bt_writable:s0
 

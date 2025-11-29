@@ -10,6 +10,9 @@ allow hal_audio_default vendor_sysfs_cirrus_cal:file rw_file_perms;
 
 allow hal_audio_default rild:unix_stream_socket connectto;
 
+# Allow audio HAL to find hal_vendor_a2dpoffload_hwservice
+allow hal_audio_default hal_vendor_a2dpoffload_hwservice:hwservice_manager find;
+
 # Allow audio HAL to read/write sysfs_abox_writable
 allow hal_audio_default sysfs_abox_writable:file rw_file_perms;
 

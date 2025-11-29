@@ -266,6 +266,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     cbd \
     secril_config_svc \
+    sehradiomanager.conf.exynos2100 \
     sehradiomanager
 
 $(call soong_config_set,cbd,protocol,sipc)

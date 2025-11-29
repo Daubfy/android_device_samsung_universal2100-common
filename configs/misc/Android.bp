@@ -1,0 +1,17 @@
+//
+// Copyright (C) 2025 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_defaults {
+    name: "misc_etc_defaults.exynos2100",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "sehradiomanager.conf.exynos2100",
+    defaults: ["misc_etc_defaults.exynos2100"],
+    src: "sehradiomanager.conf",
+    filename: "sehradiomanager.conf",
+}

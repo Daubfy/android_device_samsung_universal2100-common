@@ -4,6 +4,10 @@ allow hal_audio_default efs_file:dir search;
 r_dir_file(hal_audio_default, imei_efs_file);
 r_dir_file(hal_audio_default, sec_efs_file);
 
+# Allow audio HAL to read/write vendor_sysfs_cirrus_cal
+allow hal_audio_default vendor_sysfs_cirrus_cal:dir r_dir_perms;
+allow hal_audio_default vendor_sysfs_cirrus_cal:file rw_file_perms;
+
 allow hal_audio_default rild:unix_stream_socket connectto;
 
 # Allow audio HAL to read/write sysfs_abox_writable

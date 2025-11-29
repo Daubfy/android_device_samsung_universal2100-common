@@ -1,6 +1,8 @@
 ## Data Files
 /data/vendor/mediadrm(/.*)?                  u:object_r:mediadrm_vendor_data_file:s0
 /data/vendor/nfc(/.*)?                       u:object_r:nfc_vendor_data_file:s0
+/data/vendor/eden(/.*)?                      u:object_r:vendor_npu_data_file:s0
+/data/vendor/eden/gpu(/.*)?                  u:object_r:vendor_npu_gpu_file:s0
 /data/vendor/gatekeeper(/.*)?                u:object_r:vendor_gatekeeper_data_file:s0
 
 ## Devices
@@ -24,6 +26,9 @@
 
 # NFC
 /dev/sec-nfc                                 u:object_r:nfc_device:s0
+
+# NPU
+/dev/vertex10                                u:object_r:vendor_npu_device:s0
 
 # k250a
 /dev/k250a                                   u:object_r:k250a_device:s0
@@ -92,8 +97,13 @@
 # Wakeup
 /sys/devices/platform/(.*)/wakeup[0-9]*(/.*)?                                                      u:object_r:sysfs_wakeup:s0
 
+# Eden gpu file
+/(vendor|system/vendor)/etc/eden/gpu(/.*)?                                                         u:object_r:vendor_eden_gpu_vendor_file:s0
+
 ## Vendor Services
 /(vendor|system/vendor)/bin/hw/gps.sh                                                              u:object_r:gpsd_exec:s0
 /(vendor|system/vendor)/bin/hermesd                                                                u:object_r:hermesd_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.keymaster@[0-9]\.[0-9]_strongbox-service         u:object_r:hal_keymaster_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.samsung_slsi\.hardware\.SbwcDecompService@1\.0-service      u:object_r:hal_sbwcdecomp_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.neuralnetworks@1\.[0-9]-service\.eden-drv        u:object_r:hal_neuralnetworks_eden_drv_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.samsung_slsi\.hardware\.eden_runtime@1\.0-service           u:object_r:hal_vendor_eden_runtime_default_exec:s0

@@ -2,6 +2,8 @@
 type mediadrm_vendor_data_file, file_type, data_file_type;
 type nfc_vendor_data_file, file_type, data_file_type;
 type vendor_gatekeeper_data_file, file_type, data_file_type;
+type vendor_npu_data_file, file_type, data_file_type;
+type vendor_npu_gpu_file, file_type, data_file_type;
 
 # efs types
 type cpdebug_efs_file, file_type;
@@ -28,3 +30,9 @@ type sysfs_displayport_writable, sysfs_type, rw_fs_type, fs_type;
 type sysfs_input_writable, sysfs_type, rw_fs_type, fs_type;
 type sysfs_mem_boost_writable, sysfs_type, rw_fs_type, fs_type;
 type sysfs_v4l, sysfs_type, r_fs_type, fs_type;
+
+# NPU version
+type sysfs_npu_version, sysfs_type, r_fs_type, fs_type;
+
+# Eden gpu file
+type vendor_eden_gpu_vendor_file, file_type, vendor_file_type;

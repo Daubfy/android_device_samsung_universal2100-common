@@ -6,6 +6,9 @@
 ## Devices
 /dev/block/platform/.+/by-name/dtb           u:object_r:dtb_block_device:s0
 
+# Abox
+/sys/devices/platform/18c50000.abox/service  u:object_r:sysfs_abox_writable:s0
+
 # Camera
 /dev/jsqz                                    u:object_r:jsqz_device:s0
 /dev/m2m1shot_scaler0                        u:object_r:m2m1shot_device:s0

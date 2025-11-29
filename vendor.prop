@@ -12,6 +12,10 @@ dalvik.vm.lockprof.threshold=500
 ## FRP
 ro.frp.pst=/dev/block/persistent
 
+## Hermesd
+vendor.securehw.available=false
+vendor.securenvm.available=false
+
 ## keystore
 ro.hardware.keystore=mdfpp
 ro.hardware.keystore_desede=true

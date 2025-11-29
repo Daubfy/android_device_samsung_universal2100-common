@@ -21,6 +21,9 @@
 # NFC
 /dev/sec-nfc                                 u:object_r:nfc_device:s0
 
+# k250a
+/dev/k250a                                   u:object_r:k250a_device:s0
+
 # RIL
 /dev/modem_boot_spi                          u:object_r:vendor_radio_device:s0
 /dev/nr_boot0                                u:object_r:vendor_radio_device:s0
@@ -33,8 +36,9 @@
 # Secmem
 /dev/s5p-smem                                u:object_r:secmem_device:s0
 
-# Sensors
-/dev/max_hrm                                 u:object_r:sensors_device:s0
+# ssp_device
+/dev/ssp                                     u:object_r:ssp_device:s0
+/dev/ssp_data_injection                      u:object_r:ssp_device:s0
 
 # Soundtrigger
 /dev/vts_fio_dev                             u:object_r:vts_fio_device:s0
@@ -86,4 +90,5 @@
 
 ## Vendor Services
 /(vendor|system/vendor)/bin/hw/gps.sh                                                              u:object_r:gpsd_exec:s0
+/(vendor|system/vendor)/bin/hermesd                                                                u:object_r:hermesd_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.keymaster@[0-9]\.[0-9]_strongbox-service         u:object_r:hal_keymaster_default_exec:s0

@@ -4,6 +4,10 @@ vendor.bluetooth_fw_ver        u:object_r:vendor_bluetooth_prop:s0
 # Camera
 persist.vendor.sys.camera.     u:object_r:vendor_camera_prop:s0
 
+# Hermesd
+vendor.securehw.               u:object_r:vendor_securehw_prop:s0
+vendor.securenvm.              u:object_r:vendor_securenvm_prop:s0
+
 # HWC
 vendor.hwc.                    u:object_r:vendor_hwc_prop:s0
 

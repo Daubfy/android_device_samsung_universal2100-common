@@ -45,6 +45,15 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libskeymaster4device.so': blob_fixup()
         .replace_needed('libcrypto.so', 'libcrypto-v33.so')
         .add_needed('libshim_crypto.so'),
+    'vendor/bin/hermesd': blob_fixup()
+        .binary_regex_replace(
+            b'security.securehw.available',
+            b'vendor.securehw.available\x00\x00'
+        )
+        .binary_regex_replace(
+            b'security.securenvm.available',
+            b'vendor.securenvm.available\x00\x00'
+        ),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

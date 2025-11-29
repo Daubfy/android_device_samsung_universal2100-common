@@ -9,6 +9,7 @@ allow hal_audio_default vendor_sysfs_cirrus_cal:dir r_dir_perms;
 allow hal_audio_default vendor_sysfs_cirrus_cal:file rw_file_perms;
 
 allow hal_audio_default rild:unix_stream_socket connectto;
+allow hal_audio_default self:netlink_kobject_uevent_socket { bind create read setopt getopt };
 
 # Allow audio HAL to find hal_vendor_a2dpoffload_hwservice
 allow hal_audio_default hal_vendor_a2dpoffload_hwservice:hwservice_manager find;

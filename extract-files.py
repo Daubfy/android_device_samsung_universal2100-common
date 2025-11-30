@@ -39,6 +39,24 @@ lib_fixups: lib_fixups_user_type = {
 blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libkeymaster_helper.so': blob_fixup()
         .replace_needed('libcrypto.so', 'libcrypto-v33.so'),
+    'vendor/lib64/libnpuc_backend.so': blob_fixup()
+        .add_needed('liblog.so')
+        .add_needed('libnpuc_cmdq.so'),
+    'vendor/lib64/libnpuc_graph.so': blob_fixup()
+        .add_needed('libnpuc_common.so'),
+    (
+        'vendor/lib64/libnpuc_common.so',
+        'vendor/lib64/libnpuc_controller.so',
+        'vendor/lib64/libnpuc_frontend.so',
+        'vendor/lib64/libnpuc_template.so',
+    ): blob_fixup()
+        .add_needed('liblog.so'),
+    (
+        'vendor/lib/libeden_ud_gpu.so',
+        'vendor/lib64/libeden_ud_gpu.so',
+    ): blob_fixup()
+        .replace_needed('libOpenCL.so', 'libGLES_mali.so')
+        .add_needed('libeden_ud_cpu.so'),
     'vendor/lib64/libsec-ril.so': blob_fixup()
         .sig_replace(
             '82 0C 80 52 24 00 80 52 E1 03 15 AA 08 00 40 F9 E3 03 14 AA',

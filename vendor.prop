@@ -16,6 +16,11 @@ ro.fastbootd.available=true
 ## Camera
 ro.camera.disableJpegR=true
 
+## Eden
+log.tag.EDEN=INFO
+ro.vendor.eden.devices=CPU1_GPU1_NPU3_DSP1
+ro.vendor.eden.npu.version.path=/sys/devices/platform/npu_exynos/version
+
 ## FRP
 ro.frp.pst=/dev/block/persistent
 

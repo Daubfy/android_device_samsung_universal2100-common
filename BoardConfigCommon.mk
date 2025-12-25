@@ -35,6 +35,7 @@ BOARD_VENDOR := samsung
 TARGET_BOARD_PLATFORM := universal2100
 TARGET_BOOTLOADER_BOARD_NAME := exynos2100
 TARGET_SOC := exynos2100
+include device/samsung/exynos2100/BoardConfig2100.mk
 
 ## Kernel source
 TARGET_KERNEL_SOURCE ?= kernel/samsung/$(TARGET_SOC)

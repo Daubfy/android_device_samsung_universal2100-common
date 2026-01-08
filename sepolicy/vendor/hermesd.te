@@ -2,6 +2,7 @@ type hermesd, domain;
 type hermesd_exec, exec_type, file_type, vendor_file_type;
 
 hal_server_domain(hermesd, hal_weaver)
+hal_server_domain(hermesd, hal_gatekeeper)
 
 init_daemon_domain(hermesd)
 unix_socket_connect(hermesd, property, init)

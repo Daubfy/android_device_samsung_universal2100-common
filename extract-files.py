@@ -37,7 +37,10 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
-    'vendor/lib64/libkeymaster_helper.so': blob_fixup()
+    (
+        'vendor/lib64/libkeymaster_helper.so',
+        'vendor/lib64/libskeymaster4device.so',
+    ): blob_fixup()
         .replace_needed('libcrypto.so', 'libcrypto-v33.so'),
     'vendor/lib64/libnpuc_backend.so': blob_fixup()
         .add_needed('liblog.so')
@@ -75,9 +78,6 @@ blob_fixups: blob_fixups_user_type = {
             b'_ZN7android6Thread3runEPKcim',
             b'_ZN7utils326Thread3runEPKcim'
         ),
-    'vendor/lib64/libskeymaster4device.so': blob_fixup()
-        .replace_needed('libcrypto.so', 'libcrypto-v33.so')
-        .add_needed('libshim_crypto.so'),
     'vendor/lib/libwvhidl.so': blob_fixup()
         .replace_needed('libprotobuf-cpp-lite-3.9.1.so', 'libprotobuf-cpp-full-3.9.1.so')
         .add_needed('libcrypto_shim.so'),

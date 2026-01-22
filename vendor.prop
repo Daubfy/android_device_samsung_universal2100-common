@@ -63,7 +63,6 @@ debug.renderengine.backend=skiavkthreaded
 ## SurfaceFlinger
 persist.sys.sf.color_saturation=1.0
 debug.sf.auto_latch_unsignaled=0
-debug.sf.disable_client_composition_cache=1
 debug.sf.predict_hwc_composition_strategy=0
 debug.sf.treat_170m_as_sRGB=1
 debug.sf.early.app.duration=16600000

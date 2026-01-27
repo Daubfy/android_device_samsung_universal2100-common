@@ -246,7 +246,8 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors-service.samsung-multihal
+    android.hardware.sensors-service.samsung-multihal \
+    sensors.sensorhub_wait_for_mcu
 
 PRODUCT_PACKAGES += \
     android.hardware.sensor.accelerometer.prebuilt.xml \

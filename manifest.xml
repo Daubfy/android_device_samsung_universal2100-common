@@ -110,15 +110,6 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.media.c2</name>
-        <transport>hwbinder</transport>
-        <version>1.2</version>
-        <interface>
-            <name>IComponentStore</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
         <name>vendor.samsung_slsi.hardware.eden_runtime</name>
         <transport>hwbinder</transport>
         <version>1.0</version>

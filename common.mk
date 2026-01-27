@@ -23,11 +23,6 @@ $(call inherit-product, hardware/samsung_slsi-linaro/config/config.mk)
 # Inherit from the proprietary version
 $(call inherit-product, vendor/samsung/exynos2100/exynos2100-vendor.mk)
 
-# call common exynos2100 system debug props
-ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
-$(call inherit-product, device/samsung/exynos2100/system_prop_debug.mk)
-endif
-
 # API
 PRODUCT_SHIPPING_API_LEVEL := 30
 BOARD_SHIPPING_API_LEVEL := 30

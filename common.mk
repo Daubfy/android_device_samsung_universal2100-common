@@ -117,10 +117,6 @@ PRODUCT_PACKAGES += \
     libExynosC2Vp9Enc \
     libExynosC2Av1Dec
 
-PRODUCT_PACKAGES += \
-    codec2.vendor.base.policy \
-    codec2.vendor.ext.policy
-
 # Media
 PRODUCT_PACKAGES += \
     media_codecs_c2.exynos2100 \

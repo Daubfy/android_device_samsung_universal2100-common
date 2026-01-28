@@ -92,8 +92,6 @@ ro.surface_flinger.enable_frame_rate_override=false
 ro.surface_flinger.supports_background_blur=1
 
 ## HWC
-vendor.hwc.exynos.vsync_mode=0
-ro.vendor.hw.use_hwc_cpu_perf_mode=1
 ro.vendor.hw.use_virtual_display=1
 ro.vendor.hw.use_disable_composition_type_gles=1
 ro.vendor.hw.use_secure_encoder_only=1

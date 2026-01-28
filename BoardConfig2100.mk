@@ -21,17 +21,12 @@ BOARD_SUPPORT_MFC_ENC_RGB := true
 BOARD_SUPPORT_MFC_ENC_BT2020 := true
 BOARD_USE_BLOB_ALLOCATOR := true
 BOARD_USE_QUERY_HDR2SDR := false
-BOARD_USE_COMPRESSED_COLOR := true
 
 BOARD_USE_HEVC_HWIP := false
 BOARD_HW_SUPPORT_FILMGRAIN := true
 
 # HWComposer
-BOARD_USES_HWC_CPU_PERF_MODE := true
 BOARD_USES_EXYNOS_AFBC_FEATURE := true
-BOARD_USES_VSYNC_MODE := true
-
-BOARD_LIBHDR10P_META_PLUGIN := true
 BOARD_LIBHDR_PLUGIN := //vendor/samsung/exynos2100:vendor.samsung.libcolor.hardware
 BOARD_LIBHDR10P_META_PLUGIN := //vendor/samsung/exynos2100:vendor.samsung.libcolor.hdr10plus
 

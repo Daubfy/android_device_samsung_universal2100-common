@@ -30,6 +30,8 @@ BOARD_USES_EXYNOS_AFBC_FEATURE := true
 BOARD_LIBHDR_PLUGIN := //vendor/samsung/exynos2100:vendor.samsung.libcolor.hardware
 BOARD_LIBHDR10P_META_PLUGIN := //vendor/samsung/exynos2100:vendor.samsung.libcolor.hdr10plus
 
+$(call soong_config_set, exynos_hwc, USES_VRR_WINCONFIG, true)
+
 # VirtualDisplay
 BOARD_USES_VIRTUAL_DISPLAY := true
 BOARD_USES_DISABLE_COMPOSITIONTYPE_GLES := true

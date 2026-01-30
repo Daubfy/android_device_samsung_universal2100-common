@@ -3,7 +3,7 @@
 /data/vendor/nfc(/.*)?                       u:object_r:nfc_vendor_data_file:s0
 /data/vendor/eden(/.*)?                      u:object_r:vendor_npu_data_file:s0
 /data/vendor/eden/gpu(/.*)?                  u:object_r:vendor_npu_gpu_file:s0
-/data/vendor/gatekeeper(/.*)?                u:object_r:vendor_gatekeeper_data_file:s0
+/data/vendor/hermesgkpr(/.*)?                u:object_r:vendor_hermesd_data_file:s0
 
 ## Devices
 /dev/block/platform/.+/by-name/dtb           u:object_r:dtb_block_device:s0

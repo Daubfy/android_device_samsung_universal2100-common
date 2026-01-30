@@ -15,9 +15,10 @@ allow hermesd ssp_device:chr_file rw_file_perms;
 # Allow hermesd to access tee tz_user_device
 allow hermesd tz_user_device:chr_file rw_file_perms;
 
-# Allow hermesd to read/write vendor_gatekeeper_data_file
-allow hermesd vendor_gatekeeper_data_file:dir rw_dir_perms;
-allow hermesd vendor_gatekeeper_data_file:file create_file_perms;
+# Allow hermesd to access vendor_hermesd_data_file
+allow hermesd vendor_hermesd_data_file:dir rw_dir_perms;
+allow hermesd vendor_hermesd_data_file:dir create_dir_perms;
+allow hermesd vendor_hermesd_data_file:file { create_file_perms };
 
 allow hermesd self:capability2 wake_alarm;
 

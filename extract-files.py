@@ -100,9 +100,11 @@ blob_fixups: blob_fixups_user_type = {
        'vendor/lib64/libaudioparamupdate.so',
    ): blob_fixup()
         .replace_needed('libaudioroute.so', 'libaudioroute_exynos2100.so'),
-    'vendor/etc/libnfc-nci.conf': blob_fixup()
-        .regex_replace('/data/nfc', '/data/vendor/nfc'),
     'vendor/bin/hermesd': blob_fixup()
+        .binary_regex_replace(
+            b'/data/vendor/gatekeeper',
+            b'/data/vendor/hermesgkpr'
+        )
         .binary_regex_replace(
             b'security.securehw.available',
             b'vendor.securehw.available\x00\x00'
@@ -110,6 +112,16 @@ blob_fixups: blob_fixups_user_type = {
         .binary_regex_replace(
             b'security.securenvm.available',
             b'vendor.securenvm.available\x00\x00'
+        ),
+    'vendor/lib64/libhermes.so': blob_fixup()
+        .binary_regex_replace(
+            b'/data/vendor/gatekeeper',
+            b'/data/vendor/hermesgkpr'
+        ),
+    'vendor/etc/init/hermesd.rc': blob_fixup()
+        .regex_replace(
+            '/data/vendor/gatekeeper',
+            '/data/vendor/hermesgkpr'
         ),
 }  # fmt: skip
 

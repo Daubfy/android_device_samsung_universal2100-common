@@ -112,3 +112,4 @@
 /(vendor|system/vendor)/bin/hw/vendor\.samsung_slsi\.hardware\.SbwcDecompService@1\.0-service      u:object_r:hal_sbwcdecomp_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.neuralnetworks@1\.[0-9]-service\.eden-drv        u:object_r:hal_neuralnetworks_eden_drv_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.samsung_slsi\.hardware\.eden_runtime@1\.0-service           u:object_r:hal_vendor_eden_runtime_default_exec:s0
+/(vendor|system/vendor)/bin/hw/samsung\.hardware\.media\.c2-service                                u:object_r:mediacodec_exec:s0

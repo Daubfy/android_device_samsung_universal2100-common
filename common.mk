@@ -231,10 +231,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/init/fstab.exynos2100:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.exynos2100
 
-# Light
-PRODUCT_PACKAGES += \
-    android.hardware.light-service.samsung
-
 # Public Libraries
 PRODUCT_PACKAGES += \
     public.libraries.exynos2100

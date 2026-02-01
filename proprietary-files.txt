@@ -84,6 +84,7 @@ vendor/lib64/libexynoscamera_plugin_utils.so
 vendor/lib64/libhwjsqz.so
 vendor/lib64/libIMUSensor.so
 vendor/lib64/libsemseg.so
+vendor/lib64/libc++_shared.so
 vendor/lib64/libmpbase.so
 vendor/lib64/libsensorlistener.so
 vendor/lib64/libuniapi.so
@@ -108,65 +109,16 @@ vendor/firmware/clFGN8BitNV12_64.bin
 vendor/firmware/clFGN8BitYV12_32.bin
 vendor/firmware/clFGN8BitYV12_64.bin
 vendor/firmware/libgaussian3x3.elf
+vendor/firmware/secure_configuration.flm.cfg.bin
 
 ## Codec2
 vendor/lib64/libFilmGrainNoise.so
 vendor/lib64/libImageFormatConverter.so
 
-## Neural Networks
-vendor/bin/hw/android.hardware.neuralnetworks@1.3-service.eden-drv
-vendor/bin/hw/vendor.samsung_slsi.hardware.eden_runtime@1.0-service
-vendor/etc/eden/gpu/eden_kernel_64.bin
-vendor/etc/init/android.hardware.neuralnetworks@1.3-service.eden-drv.rc
-vendor/etc/init/vendor.samsung_slsi.hardware.eden_runtime@1.0-service.rc
-vendor/lib64/libcommon.so
-vendor/lib64/libcrane_compiler.so
-vendor/lib64/libeden_model.so
-vendor/lib64/libeden_nn.so
-vendor/lib64/libeden_nn_on_vendor.so
-vendor/lib64/libeden_osal.so
-vendor/lib64/libeden_profiler.so
-vendor/lib64/libeden_rt.so
-vendor/lib64/libeden_rt_stub_vendor.edensdk.samsung.so
-vendor/lib64/libeden_ud_cpu.so
-vendor/lib64/libeden_ud_dsp.so
-vendor/lib64/libeden_ud_gpu.so
-vendor/lib64/libeden_ud_npu.so
-vendor/lib64/libeden_wrapper.so
-vendor/lib64/libeden_wrapper_sdk.so
-vendor/lib64/libeden_xtool.so
-vendor/lib64/libenn_dsp_dal.so
-vendor/lib64/libenn_dsp_fw_graph_parser.so
-vendor/lib64/libenn_dsp_kernels_cpu.so
-vendor/lib64/libgraphgen_ann_import.so
-vendor/lib64/libgraphgen_ann_nnc.so
-vendor/lib64/libgraphgen_api.so
-vendor/lib64/libgraphgen_export.so
-vendor/lib64/libgraphgen_import.so
-vendor/lib64/libgraphgen_intermediate_process.so
-vendor/lib64/libgraphgen_misc.so
-vendor/lib64/libgraphgen_network.so
-vendor/lib64/libir.so
-vendor/lib64/libnpu_compiler.so
-vendor/lib64/libnpuc_api.so
-vendor/lib64/libnpuc_backend.so
-vendor/lib64/libnpuc_cmdq.so
-vendor/lib64/libnpuc_common.so
-vendor/lib64/libnpuc_controller.so
-vendor/lib64/libnpuc_frontend.so
-vendor/lib64/libnpuc_graph.so
-vendor/lib64/libnpuc_template.so
-vendor/lib64/libsait_npu_compiler.so
-vendor/lib64/libeden_gpu_boost_stub_vendor.edensdk.samsung.so
-vendor/lib64/vendor.samsung_slsi.hardware.gpu_boost@1.0.so
-vendor/lib64/vendor.samsung_slsi.hardware.eden_runtime@1.0-impl.so
-vendor/lib64/vendor.samsung_slsi.hardware.eden_runtime@1.0.so
-
 ## Neural Networks firmware
 vendor/firmware/libnn.elf
 vendor/firmware/libivp.elf
 vendor/firmware/liblog.elf
-vendor/firmware/secure_configuration.flm.cfg.bin
 
 ## NFC
 vendor/firmware/nfc/libsn100u_fw.so:vendor/lib64/libsn100u_fw.so

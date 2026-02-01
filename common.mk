@@ -260,11 +260,6 @@ PRODUCT_PACKAGES += \
     android.hardware.sensor.stepcounter.prebuilt.xml \
     android.hardware.sensor.stepdetector.prebuilt.xml
 
-# Neural networks
-PRODUCT_PACKAGES += \
-    android.hardware.neuralnetworks@1.3.vendor \
-    libtextclassifier_hash.vendor
-
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc-service.nxp

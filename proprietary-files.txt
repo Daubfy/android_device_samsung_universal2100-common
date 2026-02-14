@@ -160,16 +160,14 @@ vendor/lib64/vendor.samsung.hardware.gnss@2.1.so
 
 ## Graphics
 vendor/etc/hdr_samsung_mx.key
+vendor/lib/egl/libGLES_mali.so;SYMLINK=vendor/lib/libOpenCL.so;SYMLINK=vendor/lib/libOpenCL.so.1;SYMLINK=vendor/lib/libOpenCL.so.1.1
+vendor/lib/hw/vulkan.mali.so
 vendor/lib/vendor.samsung.libcolor.hardware.so
 vendor/lib/vendor.samsung.libcolor.hdr10plus.so
+vendor/lib64/egl/libGLES_mali.so;SYMLINK=vendor/lib64/libOpenCL.so;SYMLINK=vendor/lib64/libOpenCL.so.1;SYMLINK=vendor/lib64/libOpenCL.so.1.1
+vendor/lib64/hw/vulkan.mali.so
 vendor/lib64/vendor.samsung.libcolor.hardware.so
 vendor/lib64/vendor.samsung.libcolor.hdr10plus.so
-
-## Mali GPU - from Exynos 1080
-vendor/lib/egl/libGLES_mali.so;SYMLINK=vendor/lib/libOpenCL.so;SYMLINK=vendor/lib/libOpenCL.so.1;SYMLINK=vendor/lib/libOpenCL.so.1.1|baee5c1fa551d690410b29b988fc21443b9f3825
-vendor/lib/hw/vulkan.mali.so|b491d3f7555a95b4bdcf9869916fa7f9041200fe
-vendor/lib64/egl/libGLES_mali.so;SYMLINK=vendor/lib64/libOpenCL.so;SYMLINK=vendor/lib64/libOpenCL.so.1;SYMLINK=vendor/lib64/libOpenCL.so.1.1|ebe08260e0f2fee188d1915a75d3f383d950bef5
-vendor/lib64/hw/vulkan.mali.so|91787d4cc2250b3ad9c98f9cd0c0d8bc0b9ae064
 
 ## Keymaster
 vendor/bin/hw/android.hardware.keymaster@4.0_strongbox-service

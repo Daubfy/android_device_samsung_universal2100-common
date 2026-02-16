@@ -106,4 +106,3 @@
 /vendor/bin/hw/android\.hardware\.secure_element-service\.nxp                                      u:object_r:hal_secure_element_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.samsung_slsi\.hardware\.SbwcDecompService@1\.0-service      u:object_r:hal_sbwcdecomp_default_exec:s0
 /(vendor|system/vendor)/bin/hw/samsung\.hardware\.media\.c2-service                                u:object_r:mediacodec_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.graphics\.allocator-V1-service                   u:object_r:hal_graphics_allocator_default_exec:s0

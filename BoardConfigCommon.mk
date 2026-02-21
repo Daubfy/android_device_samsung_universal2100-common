@@ -108,7 +108,7 @@ TARGET_USES_DISPLAY_RENDER_INTENTS := true
 BOARD_LIBHDR_PLUGIN := //vendor/samsung/exynos2100:vendor.samsung.libcolor.hardware
 BOARD_LIBHDR10P_META_PLUGIN := //vendor/samsung/exynos2100:vendor.samsung.libcolor.hdr10plus
 
-$(call soong_config_set, exynos_hwc, USES_VRR_WINCONFIG, true)
+$(call soong_config_set_bool, exynos_hwc, USES_VRR_WINCONFIG, true)
 
 ## SCALER
 BOARD_DEFAULT_CSC_HW_SCALER := 4

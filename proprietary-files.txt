@@ -175,11 +175,18 @@ vendor/etc/init/android.hardware.keymaster@4.0_strongbox-service.rc
 vendor/lib64/libkeymaster_helper.so
 vendor/lib64/libskeymaster4device.so
 
-## RIL - Init
+## RIL
 vendor/etc/init/init.baseband.rc
 vendor/etc/init/init.vendor.rilcommon.rc
+vendor/etc/plmn_delta.bin
+vendor/etc/plmn_delta_attaio.bin
+vendor/etc/plmn_delta_hktw.bin
+vendor/etc/plmn_delta_ltn.bin
+vendor/etc/plmn_delta_usagsm.bin
+vendor/etc/plmn_se13_prebuilt.bin
 
-## RIL - from a55x - A556EXXSABYI4
+## RIL - from A556EXXSABYI4
+# Note: 32-bit libraries are taken from A546EXXUFEYJ4
 vendor/bin/hw/rild|e00d12047f9a3ce9eb75f38c6f43fa82564827f3
 vendor/etc/init/vendor.samsung.rild.rc|a4cc7e6d99aa026b4dc438d73b260d4143ae26b6
 vendor/etc/vintf/manifest/vendor.samsung.hardware.radio.exclude.slsi.xml|c3f8ea3f6228f2d572081b0c0ae29a251de4350b
@@ -200,22 +207,14 @@ vendor/lib64/vendor.samsung.hardware.radio.data-V1-ndk.so|de741fe8c442fbf555020c
 vendor/lib64/vendor.samsung.hardware.radio.messaging-V1-ndk.so|253e1ee51bba7e8a61e93abc198c48cdfa21cf28
 vendor/lib64/vendor.samsung.hardware.radio.sim-V1-ndk.so|a2f0be5b802aa317d05f388b44a8b1917b02cfd7
 
-## RIL Dependencies
-vendor/etc/mtu-conf.xml
-vendor/etc/plmn_delta.bin
-vendor/etc/plmn_delta_attaio.bin
-vendor/etc/plmn_delta_hktw.bin
-vendor/etc/plmn_delta_ltn.bin
-vendor/etc/plmn_delta_usagsm.bin
-vendor/etc/plmn_se13_prebuilt.bin
-vendor/lib64/libengmode_client.so
-vendor/lib64/libvkmanager_vendor.so
-
-## Misc
-vendor/lib/libfloatingfeature.so
-vendor/lib/libsecnativefeature.so
-vendor/lib64/libfloatingfeature.so
-vendor/lib64/libsecnativefeature.so
+## RIL Dependencies - from A556EXXSABYI4
+vendor/etc/mtu-conf.xml|5bac5f518c1573e774758d2133518cc227134099
+vendor/lib/libfloatingfeature.so|68aec0cd0ef99b8d6dadaafa103efac588a1c331
+vendor/lib/libsecnativefeature.so|a933a5a0e567edeacecbf53f136234fc89d371ee
+vendor/lib64/libfloatingfeature.so|764ca3e2137a0e0e936743192223ebfa61479fd0
+vendor/lib64/libsecnativefeature.so|984289af7a89aec3d3a9ac31a5418c948f69cba1
+vendor/lib64/libengmode_client.so|29f285027dc728d20eaa794d9f39a2fcdb4dd90c
+vendor/lib64/libvkmanager_vendor.so|bc65170c3207a897e29f7c3ee4c590b733db5de2
 
 ## Samsung wireless charger (MFC)
 vendor/firmware/mfc/mfc_fw_flash.bin

@@ -49,6 +49,9 @@ PRODUCT_PACKAGES += \
     audio_effects.exynos2100 \
     audio_policy_config.exynos2100
 
+PRODUCT_PACKAGES += \
+    sound_trigger.primary.exynos2100
+
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     frameworks/av/services/audiopolicy/config/bluetooth_with_le_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_with_le_audio_policy_configuration_7_0.xml \

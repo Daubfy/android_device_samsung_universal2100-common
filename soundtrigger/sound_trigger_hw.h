@@ -24,7 +24,7 @@
 #include <system/sound_trigger.h>
 #include <hardware/sound_trigger.h>
 
-#include"soundtrigger_conf.h"
+#include "soundtrigger_conf.h"
 
 #define UEVENT_MSG_LEN          64*1024
 /* Model index */

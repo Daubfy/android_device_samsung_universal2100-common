@@ -779,16 +779,16 @@ static void *callback_thread_loop(void *context)
                         else
                             event = sound_trigger_event_alloc(stdev, SVOICE_INDEX);
 
-                            trigger_index = SVOICE_INDEX;
-                            ALOGI("%s SVOICE Event Triggerred %d", __func__, trigger_index);
+                        trigger_index = SVOICE_INDEX;
+                        ALOGI("%s SVOICE Event Triggerred %d", __func__, trigger_index);
                     } else {
                         if (stdev->is_generic & (0x1 << HOTWORD_INDEX))
                             event = sound_trigger_generic_event_alloc(stdev, HOTWORD_INDEX);
                         else
                             event = sound_trigger_event_alloc(stdev, HOTWORD_INDEX);
 
-                            trigger_index = HOTWORD_INDEX;
-                            ALOGI("%s HOTWORD Event Triggered --%d", __func__, trigger_index);
+                        trigger_index = HOTWORD_INDEX;
+                        ALOGI("%s HOTWORD Event Triggered --%d", __func__, trigger_index);
                     }
 
                     if (event) {

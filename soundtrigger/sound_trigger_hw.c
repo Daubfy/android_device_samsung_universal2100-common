@@ -303,10 +303,12 @@ static int stdev_get_properties(
     }
 
     pthread_mutex_lock(&stdev->lock);
+#ifdef MMAP_INTERFACE_ENABLED
     if (ioctl(stdev->vtsdev_fd, VTSDRV_MISC_IOCTL_READ_GOOGLE_VERSION, &google_version) < 0) {
         ALOGE("%s: VTSDRV_MISC_IOCTL_READ_GOOGLE_VERSION failed", __func__);
         //return -EINVAL;
     }
+#endif
     pthread_mutex_unlock(&stdev->lock);
     ALOGI("%s Google Version : %d", __func__, google_version);
     memcpy(properties, &hw_properties, sizeof(struct sound_trigger_properties));

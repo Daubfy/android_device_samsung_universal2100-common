@@ -42,6 +42,7 @@
 #include <poll.h>
 #include <sys/prctl.h>
 #include <sys/ioctl.h>
+#include <sys/socket.h>
 #include <sys/mman.h>
 #include <log/log.h>
 #include <cutils/uevent.h>
@@ -583,6 +584,30 @@ static void stdev_close_mixer(struct sound_trigger_device *stdev)
     mixer_close(stdev->mixer);
 }
 
+#ifdef TARGET_EXYNOS2100
+__attribute__ ((visibility ("default")))
+int new_uevent_open_socket(int buf_sz, bool passcred)
+{
+    int fd = uevent_open_socket(buf_sz, passcred);
+    if (fd < 0)
+    {
+        ALOGE("%s: Failed to open uevent socket", __func__);
+        return -1;
+    }
+
+    int actual_buf = 0;
+    socklen_t len = sizeof(actual_buf);
+    if (getsockopt(fd, SOL_SOCKET, SO_RCVBUF, &actual_buf, &len) == 0)
+    {
+        if (actual_buf < buf_sz * 2)
+        {
+            setsockopt(fd, SOL_SOCKET, SO_RCVBUFFORCE, &buf_sz, sizeof(buf_sz));
+        }
+    }
+    return fd;
+}
+#endif
+
 // Starts the callback thread if not already running. Returns 0 on success, or a negative error code
 // otherwise. Must be called with the stdev->lock held.
 static int stdev_start_callback_thread(struct sound_trigger_device *stdev)
@@ -607,7 +632,11 @@ static int stdev_start_callback_thread(struct sound_trigger_device *stdev)
     stdev->send_socket = thread_sockets[0];
     stdev->term_socket = thread_sockets[1];
 
+#ifdef TARGET_EXYNOS2100
+    stdev->uevent_socket = new_uevent_open_socket(64*1024, true);
+#else
     stdev->uevent_socket = uevent_open_socket(64*1024, true);
+#endif
     if (stdev->uevent_socket == -1) {
         ALOGE("%s: Failed to open uevent socket", __func__);
         ret = errno;

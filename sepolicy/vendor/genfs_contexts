@@ -15,6 +15,10 @@ genfscon sysfs /devices/virtual/cirrus/cirrus_cal                               
 # Bluetooth
 genfscon sysfs /devices/platform/bluetooth/rfkill/rfkill2/state                        u:object_r:sysfs_bt_writable:s0
 
+# Bbd
+genfscon sysfs /bbd/lk_enable                                                          u:object_r:sysfs_bbd_writable:s0
+genfscon sysfs /bbd/lk_timeout                                                         u:object_r:sysfs_bbd_writable:s0
+
 # Battery
 genfscon sysfs /devices/platform/10570000.hsi2c/i2c-0/0-0063/power_supply/sm5451-charger/type                                         u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/10570000.hsi2c/i2c-0/0-0066/max77705-charger/power_supply/max77705-charger/type                      u:object_r:sysfs_battery:s0

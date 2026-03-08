@@ -160,7 +160,8 @@
       "Path": "/sys/devices/platform/18500000.mali/power_policy",
       "Values": [
         "coarse_demand",
-        "always_on"
+        "always_on",
+        "adaptive"
       ],
       "ResetOnInit": true
     },

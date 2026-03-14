@@ -48,6 +48,19 @@ genfscon sysfs /devices/platform/19f00000.decon_0/hiber_exit                    
 # Displayport
 genfscon sysfs /devices/platform/10ab0000.displayport/extcon/extcon0/cable.0/state     u:object_r:sysfs_displayport_writable:s0
 
+# EMS
+genfscon sysfs /kernel/ems/emstune/aio_tuner                                                                 u:object_r:ems_file:s0
+genfscon sysfs /kernel/ems/energy_step/coregroup0/uclamp_min                                                 u:object_r:ems_file:s0
+genfscon sysfs /kernel/ems/energy_step/coregroup4/uclamp_max                                                 u:object_r:ems_file:s0
+genfscon sysfs /kernel/ems/energy_step/coregroup4/uclamp_min                                                 u:object_r:ems_file:s0
+genfscon sysfs /kernel/ems/energy_step/coregroup7/uclamp_min                                                 u:object_r:ems_file:s0
+genfscon sysfs /kernel/ems/energy_step/coregroup7/uclamp_max                                                 u:object_r:ems_file:s0
+genfscon sysfs /devices/platform/exynos-migov/migov/running                                                  u:object_r:migov_file:s0
+genfscon sysfs /devices/platform/exynos-migov/control/set_margin                                             u:object_r:migov_file:s0
+genfscon sysfs /devices/platform/exynos-migov/control/fragutil_thr                                           u:object_r:migov_file:s0
+genfscon sysfs /devices/platform/exynos-migov/control/control_profile                                        u:object_r:migov_file:s0
+genfscon sysfs /devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/interactive/current_mode  u:object_r:ems_file:s0
+
 # GPU
 genfscon sysfs /kernel/gpu/gpu_poweroff_delay                                          u:object_r:sysfs_gpu:s0
 genfscon sysfs /kernel/gpu/gpu_freq_table                                              u:object_r:sysfs_gpu:s0

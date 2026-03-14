@@ -56,6 +56,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.epic.exynos2100",
+    defaults: ["init_etc_defaults.exynos2100"],
+    src: "init.epic.rc",
+    filename: "init.epic.rc",
+}
+
+prebuilt_etc {
     name: "init.fingerprint.exynos2100",
     defaults: ["init_etc_defaults.exynos2100"],
     src: "init.fingerprint.rc",

@@ -23,3 +23,7 @@ allow hal_graphics_composer_default vendor_surfaceflinger_vndservice:service_man
 allow hal_graphics_composer_default sysfs_displayport_writable:file rw_file_perms;
 
 allow hal_graphics_composer_default sysfs_backlight_writable:file rw_file_perms;
+
+allow hal_graphics_composer_default epicd_socket:sock_file { write setattr };
+allow hal_graphics_composer_default epicd_socket:unix_dgram_socket sendto;
+allow hal_graphics_composer_default epicd_socket:unix_stream_socket write;

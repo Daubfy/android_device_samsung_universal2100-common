@@ -101,34 +101,6 @@ on init
     write /dev/cpuctl/background/cpu.rt_runtime_us 950000
     write /dev/cpuctl/top-app/cpu.rt_runtime_us 950000
 
-    # EPIC interfaces
-    chmod 660 /dev/stune/top-app/schedtune.boost
-    chown system system /dev/mode
-    chown system system /sys/kernel/ems/global_boost
-    chown system system /dev/exynos-migov
-    chown system system /sys/devices/platform/exynos-migov/control/control_profile
-    chown system system /sys/devices/platform/exynos-migov/control/set_margin
-    chown system system /sys/devices/platform/exynos-migov/control/fragutil_thr
-    chown system system /sys/devices/platform/exynos-migov/migov/running
-    chown system system /dev/cluster0_freq_min
-    chown system system /dev/cluster1_freq_min
-    chown system system /dev/cluster2_freq_min
-    chown system system /dev/cluster0_freq_max
-    chown system system /dev/cluster1_freq_max
-    chown system system /dev/cluster2_freq_max
-    chown system system /dev/cpu_online_min
-    chown system system /dev/cpu_online_max
-    chown system system /dev/bus_throughput
-    chown system system /dev/bus_throughput_max
-    chown system system /dev/mfc_throughput
-    chown system system /dev/mfc_throughput_max
-    chown system system /dev/gpu_freq_min
-    chown system system /dev/gpu_freq_max
-    chown system system /dev/npu_throughput
-    chown system system /dev/npu_throughput_max
-    chown system system /dev/device_throughput
-    chown system system /dev/device_throughput_max
-
     # EMS interfaces
     chown system system /sys/kernel/ems/emstune/req_mode
     chown system system /sys/kernel/ems/emstune/req_cam_sub_mode

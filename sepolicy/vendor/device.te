@@ -1,6 +1,7 @@
 type dtb_block_device, dev_type;
 type k250a_device, dev_type;
 type jsqz_device, dev_type;
+type migov_device, dev_type;
 type m2m1shot_device, dev_type;
 type secmem_device, dev_type;
 type vts_fio_device, dev_type;

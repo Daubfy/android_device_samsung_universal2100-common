@@ -225,6 +225,7 @@ PRODUCT_PACKAGES += \
     init.usb.exynos2100 \
     init.ueventd.exynos2100 \
     init.recovery.exynos2100 \
+    init.epic.exynos2100 \
     init.gps.exynos2100 \
     init.fingerprint.exynos2100 \
     init.nfc.exynos2100 \

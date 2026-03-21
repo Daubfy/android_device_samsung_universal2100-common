@@ -113,17 +113,12 @@ vendor/lib64/libImageFormatConverter.so
 
 ## EPIC
 vendor/bin/epic
-vendor/bin/hw/vendor.samsung_slsi.hardware.epic@1.0-service
 vendor/etc/ems.json
 vendor/etc/epic.json
-vendor/etc/init/vendor.samsung_slsi.hardware.epic@1.0-service.rc
-vendor/lib64/hw/vendor.samsung_slsi.hardware.epic@1.0-impl.so
 vendor/lib64/libems_service.so
 vendor/lib64/libepic_helper.so
-vendor/lib64/libepicoperator.so
 vendor/lib64/libexynos_migov.so
 vendor/lib64/libgmc.so
-vendor/lib64/vendor.samsung_slsi.hardware.epic@1.0.so
 
 ## Neural Networks firmware
 vendor/firmware/libnn.elf

@@ -131,6 +131,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SamsungDoze
 
+# EPIC
+PRODUCT_PACKAGES += \
+    libepicoperator \
+    vendor.samsung_slsi.hardware.epic-service
+
 # fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
@@ -248,6 +253,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/samsung \
     hardware/samsung_slsi-linaro/exynos/cpboot_v3 \
+    hardware/samsung_slsi-linaro/exynos/epic \
     hardware/samsung_slsi-linaro/exynos/gralloc/gralloc4
 
 # Sensors

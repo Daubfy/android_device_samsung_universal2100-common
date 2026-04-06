@@ -38,14 +38,15 @@ TARGET_SOC := exynos2100
 
 ## Kernel source
 TARGET_LINUX_KERNEL_VERSION := 5.4
-TARGET_KERNEL_SOURCE ?= kernel/samsung/$(TARGET_SOC)
-TARGET_KERNEL_CONFIG ?= $(TARGET_DEVICE)_defconfig
+TARGET_KERNEL_SOURCE := kernel/samsung/universal2100
+TARGET_KERNEL_CONFIG := \
+    gki_defconfig \
+    samsung/universal2100.config \
+    samsung/$(TARGET_DEVICE).config
 
 ## DTB & DTBO
-ifneq ($(wildcard $(TARGET_KERNEL_SOURCE)),)
 BOARD_DTB_CFG := $(COMMON_PATH)/configs/kernel/$(TARGET_SOC).cfg
 BOARD_DTBO_CFG := $(COMMON_PATH)/configs/kernel/$(TARGET_DEVICE).cfg
-endif
 
 ## Boot Image
 BOARD_BOOT_HEADER_VERSION := 3

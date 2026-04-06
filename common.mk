@@ -122,6 +122,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     disable_configstore
 
+# Display
+PRODUCT_PACKAGES += \
+    AdvancedDisplay
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey

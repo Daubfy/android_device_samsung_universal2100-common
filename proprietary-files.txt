@@ -1,91 +1,91 @@
 # Proprietary files - from Samsung package version G991BOXMHHYJ1, unless pinned
 
 ## Audio
-vendor/lib/hw/vendor.samsung.hardware.audio@1.0-impl.so
 vendor/lib/hw/audio.sec_primary.default.so
-vendor/lib/libalsautils_sec.so
-vendor/lib/libsehbluetooth_audio_session.so
-vendor/lib/libspeakercalibration.so
-vendor/lib/vendor.samsung.hardware.bluetooth.audio@2.1.so
-vendor/lib/vendor.samsung.hardware.bluetooth.audio@2.0.so
-vendor/lib/libsecaudioinfo.so
+vendor/lib/hw/vendor.samsung.hardware.audio@1.0-impl.so
 vendor/lib/libSamsungPostProcessConvertor.so
-vendor/lib/lib_soundaliveresampler.so
 vendor/lib/lib_SoundAlive_SRC384_ver320.so
+vendor/lib/lib_soundaliveresampler.so
 vendor/lib/libaboxpcmdump.so
+vendor/lib/libalsautils_sec.so
+vendor/lib/libaudio-ril.so
+vendor/lib/libaudioparamupdate.so
 vendor/lib/libdatamod.so
 vendor/lib/liblastaboxmsg.so
 vendor/lib/librecordalive.so;DUMMY_SHARED_LIB
-vendor/lib/libaudioparamupdate.so
-vendor/lib/libaudio-ril.so
-vendor/lib/vendor.samsung_slsi.hardware.ExynosA2DPOffload@3.0.so
-vendor/lib/vendor.samsung.hardware.bluetooth.a2dp@1.0.so
+vendor/lib/libsecaudioinfo.so
+vendor/lib/libsehbluetooth_audio_session.so
+vendor/lib/libspeakercalibration.so
 vendor/lib/vendor.samsung.hardware.audio@1.0.so
+vendor/lib/vendor.samsung.hardware.bluetooth.a2dp@1.0.so
+vendor/lib/vendor.samsung.hardware.bluetooth.audio@2.0.so
+vendor/lib/vendor.samsung.hardware.bluetooth.audio@2.1.so
+vendor/lib/vendor.samsung_slsi.hardware.ExynosA2DPOffload@3.0.so
 vendor/lib64/hw/audio.sec_primary.default.so
 vendor/lib64/hw/vendor.samsung.hardware.audio@1.0-impl.so
+vendor/lib64/libSamsungPostProcessConvertor.so
+vendor/lib64/lib_SoundAlive_SRC384_ver320.so
+vendor/lib64/lib_soundaliveresampler.so
 vendor/lib64/libalsautils_sec.so
+vendor/lib64/libaudioparamupdate.so
+vendor/lib64/libsecaudioinfo.so
 vendor/lib64/libsehbluetooth_audio_session.so
 vendor/lib64/libspeakercalibration.so
+vendor/lib64/vendor.samsung.hardware.audio@1.0.so
+vendor/lib64/vendor.samsung.hardware.bluetooth.a2dp@1.0.so
 vendor/lib64/vendor.samsung.hardware.bluetooth.audio@2.0.so
 vendor/lib64/vendor.samsung.hardware.bluetooth.audio@2.1.so
-vendor/lib64/libsecaudioinfo.so
-vendor/lib64/libSamsungPostProcessConvertor.so
-vendor/lib64/lib_soundaliveresampler.so
-vendor/lib64/lib_SoundAlive_SRC384_ver320.so
-vendor/lib64/libaudioparamupdate.so
 vendor/lib64/vendor.samsung_slsi.hardware.ExynosA2DPOffload@3.0.so
-vendor/lib64/vendor.samsung.hardware.bluetooth.a2dp@1.0.so
-vendor/lib64/vendor.samsung.hardware.audio@1.0.so
 
 ## Audio VNDK libs
-vendor/lib/vndk/libtinyalsa.so:vendor/lib/libtinyalsa_exynos2100.so;FIX_SONAME
 vendor/lib/vndk/libaudioroute.so:vendor/lib/libaudioroute_exynos2100.so;FIX_SONAME
-vendor/lib64/vndk/libtinyalsa.so:vendor/lib64/libtinyalsa_exynos2100.so;FIX_SONAME
+vendor/lib/vndk/libtinyalsa.so:vendor/lib/libtinyalsa_exynos2100.so;FIX_SONAME
 vendor/lib64/vndk/libaudioroute.so:vendor/lib64/libaudioroute_exynos2100.so;FIX_SONAME
+vendor/lib64/vndk/libtinyalsa.so:vendor/lib64/libtinyalsa_exynos2100.so;FIX_SONAME
 
 ## Audio - Effects
-vendor/lib/soundfx/libmyspace.so
 vendor/lib/soundfx/libaudioeffectoffload.so
+vendor/lib/soundfx/libmyspace.so
 vendor/lib/soundfx/libplaybackrecorder.so
-vendor/lib/lib_SoundAlive_play_plus_ver500.so
 vendor/lib/lib_SoundAlive_3DPosition_ver202.so
 vendor/lib/lib_SoundAlive_AlbumArt_ver105.so
+vendor/lib/lib_SoundAlive_play_plus_ver500.so
 vendor/lib/libprofileparamstorage.so
-vendor/lib/libspatializerparamstorage.so
 vendor/lib/libsecaudiocoreutils.so
-vendor/lib64/soundfx/libmyspace.so
+vendor/lib/libspatializerparamstorage.so
 vendor/lib64/soundfx/libaudioeffectoffload.so
+vendor/lib64/soundfx/libmyspace.so
 vendor/lib64/soundfx/libplaybackrecorder.so
-vendor/lib64/lib_SoundAlive_play_plus_ver500.so
 vendor/lib64/lib_SoundAlive_3DPosition_ver202.so
 vendor/lib64/lib_SoundAlive_AlbumArt_ver105.so
+vendor/lib64/lib_SoundAlive_play_plus_ver500.so
 vendor/lib64/libprofileparamstorage.so
-vendor/lib64/libspatializerparamstorage.so
 vendor/lib64/libsecaudiocoreutils.so
+vendor/lib64/libspatializerparamstorage.so
 
 ## Audio firmware
 vendor/firmware/APBiBF_AUDIO_SLSI.bin
-vendor/firmware/avsyncmix.bin
 vendor/firmware/abox_tplg.bin
-vendor/firmware/listenbackeffect.bin
+vendor/firmware/avsyncmix.bin
 vendor/firmware/bidirmic.bin
 vendor/firmware/default_configuration.flm.cfg.bin
 vendor/firmware/dsp_reloc_rules.bin
+vendor/firmware/listenbackeffect.bin
 vendor/firmware/volumemonitor.bin
 
 ## Camera dependencies
+vendor/lib64/libIMUSensor.so
 vendor/lib64/libSEF.quram.so
+vendor/lib64/libc++_shared.so
+vendor/lib64/libeis_core.so
 vendor/lib64/libexynoscamera_plugin.so
 vendor/lib64/libexynoscamera_plugin_utils.so
 vendor/lib64/libhwjsqz.so
-vendor/lib64/libIMUSensor.so
-vendor/lib64/libsemseg.so
-vendor/lib64/libc++_shared.so
 vendor/lib64/libmpbase.so
+vendor/lib64/libsemseg.so
 vendor/lib64/libsensorlistener.so
 vendor/lib64/libuniapi.so
 vendor/lib64/libuniplugin.so
-vendor/lib64/libeis_core.so
 vendor/lib64/vendor.samsung.hardware.hyper-V2-ndk_platform.so
 vendor/lib64/vendor.samsung.hardware.thermal@1.0.so
 
@@ -121,9 +121,9 @@ vendor/lib64/libexynos_migov.so
 vendor/lib64/libgmc.so
 
 ## Neural Networks firmware
-vendor/firmware/libnn.elf
 vendor/firmware/libivp.elf
 vendor/firmware/liblog.elf
+vendor/firmware/libnn.elf
 
 ## NFC
 vendor/firmware/nfc/libsn100u_fw.so:vendor/lib64/libsn100u_fw.so
@@ -134,15 +134,15 @@ vendor/lib64/hw/gatekeeper.exynos2100.so
 ## Hermes
 vendor/bin/hermesd
 vendor/etc/init/hermesd.rc
-vendor/etc/secnvm/k250a_00000306.img
 vendor/etc/secnvm/k250a_00000304_c.img
-vendor/lib64/libhwvault.so
-vendor/lib64/libshctrl.so
+vendor/etc/secnvm/k250a_00000306.img
 vendor/lib64/libdk_vnd_service_core.so
 vendor/lib64/libese-grdg.so
 vendor/lib64/libhermes.so
 vendor/lib64/libhermes_bdbridge.so
 vendor/lib64/libhermes_cred.so
+vendor/lib64/libhwvault.so
+vendor/lib64/libshctrl.so
 
 # DRK
 vendor/lib64/vendor.samsung.hardware.security.drk@2.0.so
@@ -151,10 +151,10 @@ vendor/lib64/vendor.samsung.hardware.security.drk@2.0.so
 vendor/bin/hw/gps.sh
 vendor/bin/hw/lhd
 vendor/bin/hw/vendor.samsung.hardware.gnss@2.1-service
-vendor/etc/init/vendor.samsung.hardware.gnss@2.1-service.rc
-vendor/etc/sensor/lhd.conf
 vendor/etc/gnss/gps.cer
 vendor/etc/gnss/gps.xml
+vendor/etc/init/vendor.samsung.hardware.gnss@2.1-service.rc
+vendor/etc/sensor/lhd.conf
 vendor/lib64/hw/android.hardware.gnss@2.1-impl.so;FIX_SONAME
 vendor/lib64/hw/flp.default.so;FIX_SONAME
 vendor/lib64/hw/gps.default.so;FIX_SONAME
@@ -189,8 +189,8 @@ vendor/etc/plmn_delta_ltn.bin
 vendor/etc/plmn_delta_usagsm.bin
 vendor/etc/plmn_se13_prebuilt.bin
 
-## RIL - from A556EXXSABYI4
 # Note: 32-bit libraries are taken from A546EXXUFEYJ4
+## RIL - from A556EXXSABYI4
 vendor/bin/hw/rild|e00d12047f9a3ce9eb75f38c6f43fa82564827f3
 vendor/etc/init/vendor.samsung.rild.rc|a4cc7e6d99aa026b4dc438d73b260d4143ae26b6
 vendor/etc/vintf/manifest/vendor.samsung.hardware.radio.exclude.slsi.xml|c3f8ea3f6228f2d572081b0c0ae29a251de4350b
@@ -198,11 +198,11 @@ vendor/etc/vintf/manifest/vendor.samsung.hardware.radio_manifest_2_34.xml|8a78a0
 vendor/etc/vintf/manifest/vendor.samsung.hardware.sehradio_manifest_2_34.xml|ebbe359a9b2d78cb88debe79d9183c039afb7c01
 vendor/lib/libsecril-client.so|fd7cb317ad17fd6c5b94c69bc4eaef80631215f1
 vendor/lib/libsemnativecarrierfeature.so|3c54cf77c95a605beeff9d87f5ff154b6eb713f8
+vendor/lib64/libVendorSemDataProps.so|68dae919cb8e4a36246fe6c3548fe7faf398bfcb
+vendor/lib64/libVendorSemTelephonyProps.so|684afb42daeec36fbb37987b06afb236df394a22
 vendor/lib64/libril_sem.so|489bdbfd9701e3b1979b8cc05133c733cc7f586b
 vendor/lib64/libsec-ril.so|b80d415c8f91c2b0134cc8ce550fb42cf654707f
 vendor/lib64/libsecril-client.so|08be69e0a57e034f6b0b653aaff201509d7dfc5b
-vendor/lib64/libVendorSemTelephonyProps.so|684afb42daeec36fbb37987b06afb236df394a22
-vendor/lib64/libVendorSemDataProps.so|68dae919cb8e4a36246fe6c3548fe7faf398bfcb
 vendor/lib64/libsemnativecarrierfeature.so|3a8102145028c96e7120ca5cb49b56b0f4b91f32
 vendor/lib64/vendor.samsung.hardware.radio-V1-ndk.so|05642682fee7b774b674bee8d5389e42919e2691
 vendor/lib64/vendor.samsung.hardware.radio.bridge-V1-ndk.so|7cea75e71274826e54c9ca5a3664e93d9ce42900
@@ -215,9 +215,9 @@ vendor/lib64/vendor.samsung.hardware.radio.sim-V1-ndk.so|a2f0be5b802aa317d05f388
 vendor/etc/mtu-conf.xml|5bac5f518c1573e774758d2133518cc227134099
 vendor/lib/libfloatingfeature.so|68aec0cd0ef99b8d6dadaafa103efac588a1c331
 vendor/lib/libsecnativefeature.so|a933a5a0e567edeacecbf53f136234fc89d371ee
+vendor/lib64/libengmode_client.so|29f285027dc728d20eaa794d9f39a2fcdb4dd90c
 vendor/lib64/libfloatingfeature.so|764ca3e2137a0e0e936743192223ebfa61479fd0
 vendor/lib64/libsecnativefeature.so|984289af7a89aec3d3a9ac31a5418c948f69cba1
-vendor/lib64/libengmode_client.so|29f285027dc728d20eaa794d9f39a2fcdb4dd90c
 vendor/lib64/libvkmanager_vendor.so|bc65170c3207a897e29f7c3ee4c590b733db5de2
 
 ## Samsung wireless charger (MFC)
@@ -237,10 +237,10 @@ vendor/lib64/libteecl.so
 vendor/lib64/libuuid.so;MODULE_SUFFIX=_vendor
 
 ## Teegris Firmware
-vendor/tee/00000000-0000-0000-0000-42494f535542
-vendor/tee/00000000-0000-0000-0000-6d706f667376
 vendor/tee/driver/18d9f073-18a5-4ade-9def-875e07f7f293_
 vendor/tee/tui/resolution_common/ID00000100
+vendor/tee/00000000-0000-0000-0000-42494f535542
+vendor/tee/00000000-0000-0000-0000-6d706f667376
 
 ## Widevine
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine

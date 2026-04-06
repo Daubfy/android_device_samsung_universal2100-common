@@ -88,7 +88,7 @@
 /sys/devices/platform/(.*)/extcon/extcon[0-9]/state               u:object_r:sysfs_extcon:s0
 
 # Sensors
-/sys/devices/platform/acpm_mfd_bus@15960000/i2c-16/16-001f/s2mps23-gpadc/iio:device[0-9]+(/.*)?    u:object_r:sysfs_iio:s0
+/sys/devices/platform/acpm_mfd_bus@15960000/i2c-(16/16|14/14)-001f/s2mps23-gpadc/iio:device[0-9]+(/.*)?    u:object_r:sysfs_iio:s0
 /sys/devices/platform/11ec0000\.spi/spi_master/spi7/spi7\.0(/.*)/poll_delay                        u:object_r:sysfs_sensors_writable:s0
 /sys/devices/platform/11ec0000\.spi/spi_master/spi7/spi7\.0(/.*)/buffer/enable                     u:object_r:sysfs_sensors_writable:s0
 /sys/devices/platform/11ec0000\.spi/spi_master/spi7/spi7\.0(/.*)/buffer/length                     u:object_r:sysfs_sensors_writable:s0
@@ -98,7 +98,7 @@
 /sys/devices/virtual/sec/hall_ic(/.*)?                                                             u:object_r:sysfs_sec_key:s0
 
 # Touchscreen
-/sys/devices/platform/105d0000\.hsi2c/i2c-[0-9]+/[0-9]+-004b/input/input[0-9]+/enabled             u:object_r:sysfs_touchscreen_writable:s0
+/sys/devices/platform/105d0000\.hsi2c/i2c-[0-9]+/[0-9]+-(0048|004b)/input/input[0-9]+/enabled      u:object_r:sysfs_touchscreen_writable:s0
 
 # Wakeup
 /sys/devices/platform/(.*)/wakeup[0-9]*(/.*)?                                                      u:object_r:sysfs_wakeup:s0

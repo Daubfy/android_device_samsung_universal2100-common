@@ -20,6 +20,7 @@ genfscon sysfs /bbd/lk_enable                                                   
 genfscon sysfs /bbd/lk_timeout                                                         u:object_r:sysfs_bbd_writable:s0
 
 # Battery
+genfscon sysfs /devices/platform/10570000.hsi2c/i2c-0/0-0057/power_supply/pca9468-charger/type                                        u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/10570000.hsi2c/i2c-0/0-0063/power_supply/sm5451-charger/type                                         u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/10570000.hsi2c/i2c-0/0-0066/max77705-charger/power_supply/max77705-charger/type                      u:object_r:sysfs_battery:s0
 genfscon sysfs /devices/platform/10570000.hsi2c/i2c-0/0-0066/max77705-charger/power_supply/max77705-otg/type                          u:object_r:sysfs_battery:s0
@@ -85,6 +86,9 @@ genfscon sysfs /kernel/mm/vmscan/mem_boost_mode                                 
 
 # NPU
 genfscon sysfs /devices/platform/npu_exynos/version                                    u:object_r:sysfs_npu_version:s0
+
+# Storage
+genfscon sysfs /devices/platform/13100000.ufs/host0                                    u:object_r:sysfs_scsi_host:s0
 
 # Sensors
 genfscon sysfs /devices/virtual/sensors/als_rear/als_enable                            u:object_r:sysfs_sensors_writable:s0

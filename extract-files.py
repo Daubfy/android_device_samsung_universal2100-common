@@ -101,6 +101,11 @@ blob_fixups: blob_fixups_user_type = {
             b'security.securenvm.available',
             b'vendor.securenvm.available\x00\x00'
         ),
+    'vendor/bin/hw/macloader': blob_fixup()
+        .binary_regex_replace(
+            b'swlan0',
+            b'wlan1\x00'
+        ),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

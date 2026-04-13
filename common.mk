@@ -86,7 +86,6 @@ PRODUCT_PACKAGES += \
     libhwjpeg
 
 $(call soong_config_set_bool,samsungCameraVars,usage_64bit,true)
-$(call soong_config_set,libhwjpeg,HWJPEG_ANDROID_VERSION,11)
 
 PRODUCT_PACKAGES += \
     android.hardware.camera.concurrent.prebuilt.xml \
@@ -165,13 +164,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     vendor.samsung_slsi.hardware.SbwcDecompService@1.0-service
-
-$(call soong_config_set,arm_gralloc,gralloc_arm_no_external_afbc,false)
-$(call soong_config_set,arm_gralloc,mali_gpu_support_afbc_basic,true)
-$(call soong_config_set,arm_gralloc,gralloc_init_afbc,true)
-$(call soong_config_set,arm_gralloc,gralloc_ion_sync_on_lock,true)
-$(call soong_config_set,arm_gralloc,dpu_support_1010102_afbc,true)
-$(call soong_config_set_bool,sbwcdpu,enabled,true)
 
 PRODUCT_PACKAGES += \
     android.hardware.vulkan.compute-0.prebuilt.xml \

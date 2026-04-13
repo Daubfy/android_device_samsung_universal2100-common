@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-COMMON_PATH := device/samsung/exynos2100
+COMMON_PATH := device/samsung/universal2100-common
 
 # Inherit non-AB Device
 $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
@@ -19,7 +19,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 $(call inherit-product, hardware/samsung_slsi-linaro/config/config.mk)
 
 # Inherit from the proprietary version
-$(call inherit-product, vendor/samsung/exynos2100/exynos2100-vendor.mk)
+$(call inherit-product, vendor/samsung/universal2100-common/exynos2100-vendor.mk)
 
 # API
 PRODUCT_SHIPPING_API_LEVEL := 30
@@ -216,7 +216,7 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0-service.samsung \
     libkeymaster4_1support.vendor:64
 
-$(call soong_config_set,samsungVars,target_keymaster4_library,//vendor/samsung/exynos2100:libskeymaster4device)
+$(call soong_config_set,samsungVars,target_keymaster4_library,//vendor/samsung/universal2100-common:libskeymaster4device)
 
 # Kernel
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := true

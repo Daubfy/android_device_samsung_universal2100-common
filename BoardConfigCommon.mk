@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-COMMON_PATH := device/samsung/exynos2100
+COMMON_PATH := device/samsung/universal2100-common
 
 ## Architecture
 TARGET_ARCH := arm64
@@ -108,8 +108,8 @@ HWC_SUPPORT_COLOR_TRANSFORM := true
 BOARD_USES_EXYNOS_AFBC_FEATURE := true
 BOARD_USES_VIRTUAL_DISPLAY := true
 TARGET_USES_DISPLAY_RENDER_INTENTS := true
-BOARD_LIBHDR_PLUGIN := //vendor/samsung/exynos2100:vendor.samsung.libcolor.hardware
-BOARD_LIBHDR10P_META_PLUGIN := //vendor/samsung/exynos2100:vendor.samsung.libcolor.hdr10plus
+BOARD_LIBHDR_PLUGIN := //vendor/samsung/universal2100-common:vendor.samsung.libcolor.hardware
+BOARD_LIBHDR10P_META_PLUGIN := //vendor/samsung/universal2100-common:vendor.samsung.libcolor.hdr10plus
 
 $(call soong_config_set_bool, exynos_hwc, USES_VRR_WINCONFIG, true)
 
@@ -222,7 +222,7 @@ WPA_SUPPLICANT_VERSION                        := VER_0_8_X
 $(call soong_config_set_bool,wpa_supplicant_8,board_wlan_bcmdhd_sae,true)
 
 ## Inherit proprietary vendor configuration
-include vendor/samsung/exynos2100/BoardConfigVendor.mk
+include vendor/samsung/universal2100-common/BoardConfigVendor.mk
 
 ## Inherit Samsung SLSI board common configuration
 include hardware/samsung_slsi-linaro/config/BoardConfigCommon.mk

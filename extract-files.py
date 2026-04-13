@@ -18,11 +18,11 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'device/samsung/exynos2100',
+    'device/samsung/universal2100-common',
     'hardware/samsung',
     'hardware/samsung_slsi-linaro/exynos',
     'hardware/samsung_slsi-linaro/graphics',
-    'vendor/samsung/exynos2100'
+    'vendor/samsung/universal2100-common'
 ]
 
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
@@ -104,7 +104,7 @@ blob_fixups: blob_fixups_user_type = {
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'exynos2100',
+    'universal2100-common',
     'samsung',
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,

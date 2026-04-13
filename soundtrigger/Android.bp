@@ -23,7 +23,7 @@ cc_library_shared {
     header_libs: ["libhardware_headers"],
     include_dirs: [
         "external/tinyalsa/include",
-        "device/samsung/exynos2100/soundtrigger/conf",
+        "device/samsung/universal2100-common/soundtrigger/conf",
     ],
     srcs: ["sound_trigger_hw.c"],
 }

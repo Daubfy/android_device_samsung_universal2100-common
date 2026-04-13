@@ -1,4 +1,4 @@
-# Proprietary files - from Samsung package version G991BOXMHHYJ1, unless pinned
+# Proprietary files - from Samsung package version G991BXXSJHZA6, unless pinned
 
 ## Audio
 vendor/lib/hw/audio.sec_primary.default.so

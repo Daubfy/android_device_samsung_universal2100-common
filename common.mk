@@ -19,7 +19,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 $(call inherit-product, hardware/samsung_slsi-linaro/config/config.mk)
 
 # Inherit from the proprietary version
-$(call inherit-product, vendor/samsung/universal2100-common/exynos2100-vendor.mk)
+$(call inherit-product, vendor/samsung/universal2100-common/universal2100-common-vendor.mk)
 
 # API
 PRODUCT_SHIPPING_API_LEVEL := 30

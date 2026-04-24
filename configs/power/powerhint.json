@@ -115,6 +115,30 @@
       "ResetOnInit": true
     },
     {
+      "Name": "EMSTUNEReqMode",
+      "Path": "/sys/kernel/ems/emstune/req_mode",
+      "Values": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "15"
+      ],
+      "Comments": [
+        "0  => Normal Mode",
+        "1  => Power-Scenario Mode",
+        "2  => Performance Mode",
+        "3  => Game Mode",
+        "4  => Balance Mode",
+        "5  => Camera Mode",
+        "15 => Browser Mode"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true
+    },
+    {
       "Name": "TouchscreenEnable",
       "Path": "/sys/class/sec/tsp/input/enabled",
       "Values": [
@@ -211,6 +235,12 @@
       "Value": "0"
     },
     {
+      "PowerHint": "LAUNCH",
+      "Node": "EMSTUNEReqMode",
+      "Duration": 2000,
+      "Value": "0"
+    },
+    {
       "PowerHint": "INTERACTIVE",
       "Node": "UclampTAMin",
       "Duration": 3000,
@@ -227,6 +257,12 @@
       "Node": "UclampFgMin",
       "Duration": 3000,
       "Value": "50"
+    },
+    {
+      "PowerHint": "INTERACTIVE",
+      "Node": "EMSTUNEReqMode",
+      "Duration": 0,
+      "Value": "0"
     },
     {
       "PowerHint": "INTERACTIVE",
@@ -281,6 +317,12 @@
       "Node": "CPULittleClusterMinFreq",
       "Duration": 1000,
       "Value": "1690000"
+    },
+    {
+      "PowerHint": "CAMERA_LAUNCH",
+      "Node": "EMSTUNEReqMode",
+      "Duration": 0,
+      "Value": "5"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",

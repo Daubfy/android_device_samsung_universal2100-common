@@ -348,6 +348,12 @@
     },
     {
       "PowerHint": "DISPLAY_INACTIVE",
+      "Node": "MemFreq",
+      "Duration": 0,
+      "Value": "546000"
+    },
+    {
+      "PowerHint": "DISPLAY_INACTIVE",
       "Node": "RestrictedCpuset",
       "Duration": 0,
       "Value": "0-3"

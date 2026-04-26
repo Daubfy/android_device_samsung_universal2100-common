@@ -44,7 +44,7 @@
     },
     {
       "Name": "CPUMidClusterMaxFreq",
-      "Path": "/sys/devices/system/cpu/cpu5/cpufreq/scaling_max_freq",
+      "Path": "/sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq",
       "Values": [
         "2704000",
         "2600000",
@@ -55,7 +55,7 @@
     },
     {
       "Name": "CPUMidClusterMinFreq",
-      "Path": "/sys/devices/system/cpu/cpu5/cpufreq/scaling_min_freq",
+      "Path": "/sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq",
       "Values": [
         "2392000",
         "2080000",

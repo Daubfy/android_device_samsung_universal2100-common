@@ -139,6 +139,22 @@
       "ResetOnInit": true
     },
     {
+      "Name": "EMSTUNELevel",
+      "Path": "/sys/kernel/ems/emstune/req_mode_level",
+      "Values": [
+        "0",
+        "1",
+        "2"
+      ],
+      "Comments": [
+        "0 => Default",
+        "1 => Interactive boost",
+        "2 => Extreme boost"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true
+    },
+    {
       "Name": "TouchscreenEnable",
       "Path": "/sys/class/sec/tsp/input/enabled",
       "Values": [
@@ -241,6 +257,12 @@
       "Value": "0"
     },
     {
+      "PowerHint": "LAUNCH",
+      "Node": "EMSTUNELevel",
+      "Duration": 2000,
+      "Value": "2"
+    },
+    {
       "PowerHint": "INTERACTIVE",
       "Node": "UclampTAMin",
       "Duration": 3000,
@@ -263,6 +285,12 @@
       "Node": "EMSTUNEReqMode",
       "Duration": 0,
       "Value": "0"
+    },
+    {
+      "PowerHint": "INTERACTIVE",
+      "Node": "EMSTUNELevel",
+      "Duration": 0,
+      "Value": "1"
     },
     {
       "PowerHint": "INTERACTIVE",
@@ -323,6 +351,12 @@
       "Node": "EMSTUNEReqMode",
       "Duration": 0,
       "Value": "5"
+    },
+    {
+      "PowerHint": "CAMERA_LAUNCH",
+      "Node": "EMSTUNELevel",
+      "Duration": 0,
+      "Value": "2"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",

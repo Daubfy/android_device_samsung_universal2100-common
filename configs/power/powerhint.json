@@ -14,8 +14,8 @@
       "Name": "LPMEnable",
       "Path": "/sys/devices/platform/exynos-ufcc/ucc/cstate_control",
       "Values": [
-        "1",
-        "0"
+        "0",
+        "1"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -241,12 +241,6 @@
       "Node": "GPUPowerPolicy",
       "Duration": 3000,
       "Value": "coarse_demand"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "LPMEnable",
-      "Duration": 3000,
-      "Value": "0"
     },
     {
       "PowerHint": "LAUNCH",

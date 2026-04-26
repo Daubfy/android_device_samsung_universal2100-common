@@ -326,16 +326,34 @@
       "Value": "0-7"
     },
     {
+      "PowerHint": "DISPLAY_IDLE",
+      "Node": "EMSTUNEReqMode",
+      "Duration": 0,
+      "Value": "4"
+    },
+    {
       "PowerHint": "DISPLAY_INACTIVE",
       "Node": "RestrictedCpuset",
       "Duration": 0,
       "Value": "0-3"
     },
     {
+      "PowerHint": "DISPLAY_INACTIVE",
+      "Node": "EMSTUNEReqMode",
+      "Duration": 0,
+      "Value": "4"
+    },
+    {
       "PowerHint": "DEVICE_IDLE",
       "Node": "RestrictedCpuset",
       "Duration": 0,
       "Value": "0-3"
+    },
+    {
+      "PowerHint": "DEVICE_IDLE",
+      "Node": "EMSTUNEReqMode",
+      "Duration": 0,
+      "Value": "1"
     },
     {
       "PowerHint": "CAMERA_LAUNCH",

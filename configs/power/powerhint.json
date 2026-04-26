@@ -11,6 +11,20 @@
       "ResetOnInit": true
     },
     {
+      "Name": "LPMEnableLevel",
+      "Path": "/sys/devices/platform/exynos-ufcc/ucc/cstate_control_level",
+      "Values": [
+        "0",
+        "1"
+      ],
+      "Comments": [
+        "0 => Block CPD",
+        "1 => Block C2"
+      ],
+      "DefaultIndex": 0,
+      "ResetOnInit": true
+    },
+    {
       "Name": "LPMEnable",
       "Path": "/sys/devices/platform/exynos-ufcc/ucc/cstate_control",
       "Values": [
@@ -24,10 +38,10 @@
       "Name": "CPULittleClusterMaxFreq",
       "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq",
       "Values": [
-        "2106000",
+        "9999999",
+        "1274000",
         "1898000",
-        "1794000",
-        "1274000"
+        "2106000"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -36,9 +50,8 @@
       "Name": "CPULittleClusterMinFreq",
       "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq",
       "Values": [
-        "1690000",
-        "1482000",
-        "533000"
+        "9999999",
+        "1690000"
       ],
       "ResetOnInit": true
     },
@@ -46,10 +59,10 @@
       "Name": "CPUMidClusterMaxFreq",
       "Path": "/sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq",
       "Values": [
-        "2704000",
+        "9999999",
+        "1664000",
         "2600000",
-        "2496000",
-        "1664000"
+        "2704000"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -58,9 +71,8 @@
       "Name": "CPUMidClusterMinFreq",
       "Path": "/sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq",
       "Values": [
-        "2392000",
-        "2080000",
-        "624000"
+        "9999999",
+        "2080000"
       ],
       "ResetOnInit": true
     },
@@ -68,11 +80,10 @@
       "Name": "CPUBigClusterMaxFreq",
       "Path": "/sys/devices/system/cpu/cpu7/cpufreq/scaling_max_freq",
       "Values": [
-        "2808000",
+        "9999999",
+        "1768000",
         "2704000",
-        "2496000",
-        "2288000",
-        "1768000"
+        "2808000"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -81,9 +92,8 @@
       "Name": "CPUBigClusterMinFreq",
       "Path": "/sys/devices/system/cpu/cpu7/cpufreq/scaling_min_freq",
       "Values": [
-        "2184000",
-        "1976000",
-        "624000"
+        "9999999",
+        "1976000"
       ],
       "ResetOnInit": true
     },
@@ -411,6 +421,66 @@
       "Node": "EMSTUNEReqMode",
       "Duration": 0,
       "Value": "1"
+    },
+    {
+      "PowerHint": "FIXED_PERFORMANCE",
+      "Node": "CPUBigClusterMaxFreq",
+      "Duration": 0,
+      "Value": "9999999"
+    },
+    {
+      "PowerHint": "FIXED_PERFORMANCE",
+      "Node": "CPUBigClusterMinFreq",
+      "Duration": 0,
+      "Value": "9999999"
+    },
+    {
+      "PowerHint": "FIXED_PERFORMANCE",
+      "Node": "CPUMidClusterMaxFreq",
+      "Duration": 0,
+      "Value": "9999999"
+    },
+    {
+      "PowerHint": "FIXED_PERFORMANCE",
+      "Node": "CPUMidClusterMinFreq",
+      "Duration": 0,
+      "Value": "9999999"
+    },
+    {
+      "PowerHint": "FIXED_PERFORMANCE",
+      "Node": "CPULittleClusterMaxFreq",
+      "Duration": 0,
+      "Value": "9999999"
+    },
+    {
+      "PowerHint": "FIXED_PERFORMANCE",
+      "Node": "CPULittleClusterMinFreq",
+      "Duration": 0,
+      "Value": "9999999"
+    },
+    {
+      "PowerHint": "FIXED_PERFORMANCE",
+      "Node": "LPMEnableLevel",
+      "Duration": 0,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "FIXED_PERFORMANCE",
+      "Node": "LPMEnable",
+      "Duration": 0,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "FIXED_PERFORMANCE",
+      "Node": "EMSTUNEReqMode",
+      "Duration": 0,
+      "Value": "2"
+    },
+    {
+      "PowerHint": "FIXED_PERFORMANCE",
+      "Node": "EMSTUNELevel",
+      "Duration": 0,
+      "Value": "2"
     },
     {
       "PowerHint": "GAME",

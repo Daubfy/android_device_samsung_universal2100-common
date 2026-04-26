@@ -186,9 +186,7 @@
       "Name": "GPUMinFreq",
       "Path": "/sys/kernel/gpu/gpu_min_clock",
       "Values": [
-        "676000",
         "494000",
-        "403000",
         "312000",
         "130000"
       ],
@@ -368,7 +366,7 @@
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "GPUMinFreq",
       "Duration": 0,
-      "Value": "676000"
+      "Value": "494000"
     },
     {
       "PowerHint": "DOUBLE_TAP_TO_WAKE",

@@ -90,6 +90,7 @@
       "Values": [
         "0",
         "50",
+        "70",
         "100"
       ],
       "DefaultIndex": 0,
@@ -112,6 +113,7 @@
         "50",
         "100"
       ],
+      "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
@@ -244,6 +246,18 @@
     },
     {
       "PowerHint": "LAUNCH",
+      "Node": "UclampTAMin",
+      "Duration": 1500,
+      "Value": "100"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "UclampFgMin",
+      "Duration": 2000,
+      "Value": "50"
+    },
+    {
+      "PowerHint": "LAUNCH",
       "Node": "EMSTUNEReqMode",
       "Duration": 2000,
       "Value": "0"
@@ -257,8 +271,8 @@
     {
       "PowerHint": "INTERACTIVE",
       "Node": "UclampTAMin",
-      "Duration": 3000,
-      "Value": "100"
+      "Duration": 0,
+      "Value": "70"
     },
     {
       "PowerHint": "INTERACTIVE",
@@ -269,7 +283,7 @@
     {
       "PowerHint": "INTERACTIVE",
       "Node": "UclampFgMin",
-      "Duration": 3000,
+      "Duration": 0,
       "Value": "50"
     },
     {

@@ -356,6 +356,12 @@
       "Value": "1"
     },
     {
+      "PowerHint": "GAME",
+      "Node": "EMSTUNEReqMode",
+      "Duration": 0,
+      "Value": "3"
+    },
+    {
       "PowerHint": "CAMERA_LAUNCH",
       "Node": "MemFreq",
       "Duration": 1000,

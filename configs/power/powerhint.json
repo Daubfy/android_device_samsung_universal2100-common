@@ -300,6 +300,12 @@
     },
     {
       "PowerHint": "INTERACTIVE",
+      "Node": "GPUPowerPolicy",
+      "Duration": 0,
+      "Value": "adaptive"
+    },
+    {
+      "PowerHint": "INTERACTIVE",
       "Node": "RestrictedCpuset",
       "Duration": 0,
       "Value": "0-7"

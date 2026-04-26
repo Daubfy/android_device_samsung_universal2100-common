@@ -300,6 +300,12 @@
     },
     {
       "PowerHint": "INTERACTIVE",
+      "Node": "RestrictedCpuset",
+      "Duration": 0,
+      "Value": "0-7"
+    },
+    {
+      "PowerHint": "INTERACTIVE",
       "Node": "EMSTUNEReqMode",
       "Duration": 0,
       "Value": "0"

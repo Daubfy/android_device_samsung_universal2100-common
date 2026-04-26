@@ -79,12 +79,6 @@ on post-fs-data
     # sec_efs_file
     mkdir /efs/sec_efs 0775 radio system
 
-    # BUS
-    chown system radio /sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/scaling_devfreq_min
-    chown system radio /sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/available_frequencies
-    chmod 0664 /sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/scaling_devfreq_min
-    chmod 0444 /sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/available_frequencies
-
     # input booster
     chown radio system /sys/class/input_booster/level
     chown radio system /sys/class/input_booster/head

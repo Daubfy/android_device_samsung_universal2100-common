@@ -63,6 +63,14 @@ on init
     write /dev/cpuset/background/cpus 0-2
     write /dev/cpuset/system-background/cpus 0-2
 
+    # System Performance - HyPer Permission
+    chmod 0444 /sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/available_frequencies
+    chmod 0664 /sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/scaling_devfreq_min
+    chmod 0664 /sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/scaling_devfreq_max
+    chown root system /sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/available_frequencies
+    chown root system /sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/scaling_devfreq_min
+    chown root system /sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/scaling_devfreq_max
+
     setprop vendor.powerhal.init 1
 
     mkdir /dev/cpuset/sf

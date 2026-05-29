@@ -42,8 +42,6 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libskeymaster4device.so',
     ): blob_fixup()
         .replace_needed('libcrypto.so', 'libcrypto-v33.so'),
-    'vendor/lib64/libexynoscamera_plugin.so': blob_fixup()
-        .add_needed('libvpl.so'),
     'vendor/lib64/libsemseg.so': blob_fixup()
         .remove_needed('libeden_gpu_boost_stub_vendor.edensdk.samsung.so')
         .remove_needed('libeden_nn.so')

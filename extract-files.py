@@ -44,7 +44,6 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libcrypto.so', 'libcrypto-v33.so'),
     'vendor/lib64/libsemseg.so': blob_fixup()
         .remove_needed('libeden_gpu_boost_stub_vendor.edensdk.samsung.so')
-        .remove_needed('libeden_nn.so')
         .add_needed('libc++_shared.so')
         .add_needed('libshim_eden.so'),
     'vendor/lib64/libsec-ril.so': blob_fixup()
@@ -104,6 +103,25 @@ blob_fixups: blob_fixups_user_type = {
             b'swlan0',
             b'wlan1\x00'
         ),
+    'vendor/lib64/libnpuc_backend.so': blob_fixup()
+        .add_needed('liblog.so')
+        .add_needed('libnpuc_cmdq.so'),
+    'vendor/lib64/libnpuc_graph.so': blob_fixup()
+        .add_needed('libnpuc_common.so'),
+    (
+        'vendor/lib64/libnpuc_common.so',
+        'vendor/lib64/libnpuc_controller.so',
+        'vendor/lib64/libnpuc_frontend.so',
+        'vendor/lib64/libnpuc_template.so',
+    ): blob_fixup()
+        .add_needed('liblog.so'),
+    'vendor/lib64/libeden_ud_gpu.so': blob_fixup()
+        .replace_needed('libOpenCL.so', 'libGLES_mali.so')
+        .add_needed('libeden_ud_cpu.so'),
+    'vendor/lib64/libgraphgen_ann_import_s.so': blob_fixup()
+        .clear_symbol_version('AHardwareBuffer_describe')
+        .clear_symbol_version('AHardwareBuffer_lock')
+        .clear_symbol_version('AHardwareBuffer_unlock'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(

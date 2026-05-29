@@ -237,6 +237,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/init/fstab.exynos2100:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.exynos2100
 
+# Neural Networks
+PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks@1.3-service.eden-drv \
+    vendor.samsung_slsi.hardware.eden_runtime@1.0-service
+
 # Public Libraries
 PRODUCT_PACKAGES += \
     public.libraries.exynos2100

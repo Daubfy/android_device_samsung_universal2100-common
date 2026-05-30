@@ -101,7 +101,7 @@ PRODUCT_COPY_FILES += \
 
 # Codec2
 PRODUCT_PACKAGES += \
-    samsung.hardware.media.c2-service \
+    samsung.hardware.media.c2@1.2-service \
     libExynosC2H264Dec \
     libExynosC2H264Enc \
     libExynosC2HevcDec \

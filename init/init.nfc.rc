@@ -6,6 +6,7 @@ on post-fs-data
     write /sys/class/nfc_sec/pvdd "2"
 
     # NFC KEY
+    mkdir /data/nfc 0770 nfc nfc
     mkdir /data/vendor/nfc 0770 nfc nfc
 
     # NFC driver permission

@@ -43,7 +43,7 @@ TARGET_LINUX_KERNEL_VERSION := 5.4
 TARGET_KERNEL_SOURCE := kernel/samsung/universal2100
 TARGET_KERNEL_CONFIG := \
     gki_defconfig \
-    samsung/universal2100.config \
+    samsung/exynos2100.config \
     samsung/$(TARGET_DEVICE).config
 
 TARGET_KERNEL_NO_GCC := true

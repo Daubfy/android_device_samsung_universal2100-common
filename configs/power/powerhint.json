@@ -222,6 +222,7 @@
       "Values": [
         "coarse_demand",
         "always_on",
+        "adaptive"
       ],
       "ResetOnInit": true
     },

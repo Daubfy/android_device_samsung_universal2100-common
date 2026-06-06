@@ -108,6 +108,7 @@ debug.stagefright.c2-poolmask=786432
 debug.stagefright.ccodec_delayed_params=1
 debug.stagefright.ccodec_lax_type=true
 debug.stagefright.ccodec_strict_type=true
+debug.codec2.stop_hal_before_surface=1
 vendor.media.omx=0
 
 ## DRM (MediaDrm)

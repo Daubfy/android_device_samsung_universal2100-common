@@ -144,7 +144,8 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint-service.samsung
+    android.hardware.biometrics.fingerprint-service.samsung \
+    SamsungBiometrics
 
 PRODUCT_PACKAGES += \
     android.hardware.fingerprint.prebuilt.xml

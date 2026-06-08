@@ -273,6 +273,11 @@ vendor/lib64/libsec_semRil.so
 ## Sensors
 vendor/lib64/sensors.flicker.so
 
+## SysInput - from S921BXXU5BYD9
+vendor/bin/hw/vendor.samsung.hardware.sysinput-service|8a7ed9fc6e5196db2cd79c3c2a2c5028c4d2bad8
+vendor/etc/init/vendor.samsung.hardware.sysinput-default.rc|f4b7df0617466083132f09b0401f2bc50a574766
+vendor/etc/vintf/manifest/vendor.samsung.hardware.sysinput-default.xml|c28799b03bc3129eff601f6cad13dbe8c59d56d9
+
 ## Teegris
 vendor/bin/tzdaemon
 vendor/bin/tzts_daemon

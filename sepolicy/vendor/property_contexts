@@ -20,9 +20,6 @@ vendor.ril.supportNrModefromCp u:object_r:vendor_radio_prop:s0
 # NFC
 ro.vendor.nfc.                 u:object_r:vendor_sec_nfc_prop:s0
 
-# PowerHal
-vendor.powerhal.               u:object_r:vendor_power_prop:s0
-
 # Secure Element
 vendor.seHal.init              u:object_r:vendor_sehal_init_prop:s0
 

@@ -1,1 +1,4 @@
 r_dir_file(hal_health_default, sysfs_battery);
+
+# Allow hal_power to access thermal service
+hal_client_domain(hal_health_default, hal_thermal)

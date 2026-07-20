@@ -1,461 +1,89 @@
 {
-  "Nodes": [
-    {
-      "Name": "MemFreq",
-      "Path": "/sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/scaling_devfreq_min",
-      "Values": [
-        "2730000",
-        "1014000",
-        "546000"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "LPMEnableLevel",
-      "Path": "/sys/devices/platform/exynos-ufcc/ucc/cstate_control_level",
-      "Values": [
-        "0",
-        "1"
-      ],
-      "Comments": [
-        "0 => Block CPD",
-        "1 => Block C2"
-      ],
-      "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
-      "Name": "LPMEnable",
-      "Path": "/sys/devices/platform/exynos-ufcc/ucc/cstate_control",
-      "Values": [
-        "0",
-        "1"
-      ],
-      "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
-      "Name": "CPUMaxFreq",
-      "Path": "/sys/devices/platform/exynos-ufcc/ufc/cpufreq_max_limit",
-      "Values": [
-        "9999999",
-        "1768000",
-        "2704000",
-        "2912000"
-      ],
-      "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
-      "Name": "CPUMinFreq",
-      "Path": "/sys/devices/platform/exynos-ufcc/ufc/cpufreq_min_limit",
-      "Values": [
-        "9999999",
-        "2912000",
-        "2704000",
-        "1976000",
-        "1352000",
-        "50000"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "UclampTAMin",
-      "Path": "/dev/cpuctl/top-app/cpu.uclamp.min",
-      "Values": [
-        "0",
-        "50",
-        "70",
-        "100"
-      ],
-      "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
-      "Name": "UclampTALatency",
-      "Path": "/dev/cpuctl/top-app/cpu.uclamp.latency_sensitive",
-      "Values": [
-        "1",
-        "0"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "UclampFgMin",
-      "Path": "/dev/cpuctl/foreground/cpu.uclamp.min",
-      "Values": [
-        "0",
-        "50",
-        "100"
-      ],
-      "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
-      "Name": "RestrictedCpuset",
-      "Path": "/dev/cpuset/restricted/cpus",
-      "Values": [
-        "0-3",
-        "0-7"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "EMSTUNEReqMode",
-      "Path": "/sys/kernel/ems/emstune/req_mode",
-      "Values": [
-        "0",
-        "1",
-        "2",
-        "3",
-        "4",
-        "5",
-        "15"
-      ],
-      "Comments": [
-        "0  => Normal Mode",
-        "1  => Power-Scenario Mode",
-        "2  => Performance Mode",
-        "3  => Game Mode",
-        "4  => Balance Mode",
-        "5  => Camera Mode",
-        "15 => Browser Mode"
-      ],
-      "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
-      "Name": "EMSTUNELevel",
-      "Path": "/sys/kernel/ems/emstune/req_mode_level",
-      "Values": [
-        "0",
-        "1",
-        "2"
-      ],
-      "Comments": [
-        "0 => Default",
-        "1 => Interactive boost",
-        "2 => Extreme boost"
-      ],
-      "DefaultIndex": 0,
-      "ResetOnInit": true
-    },
-    {
-      "Name": "TouchscreenEnable",
-      "Path": "/sys/class/sec/tsp/input/enabled",
-      "Values": [
-        "1",
-        "0"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "LCDEnable",
-      "Path": "/sys/class/power_supply/battery/lcd",
-      "Values": [
-        "1",
-        "0"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "DoubleTapToWakeEnable",
-      "Path": "/sys/class/sec/tsp/cmd",
-      "Values": [
-        "aot_enable,0",
-        "aot_enable,1"
-      ],
-      "DefaultIndex": 0,
-      "ResetOnInit": false
-    },
-    {
-      "Name": "GPUMinFreq",
-      "Path": "/sys/kernel/gpu/gpu_min_clock",
-      "Values": [
-        "494000",
-        "312000",
-        "130000"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "GPUPowerPolicy",
-      "Path": "/sys/devices/platform/18500000.mali/power_policy",
-      "Values": [
-        "coarse_demand",
-        "always_on",
-        "adaptive"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "PowerHALRenderingState",
-      "Path": "vendor.powerhal.rendering",
-      "Values": [
-        "EXPENSIVE_RENDERING",
-        ""
-      ],
-      "Type": "Property"
-    }
-  ],
-  "Actions": [
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "CPUMaxFreq",
-      "Duration": 3000,
-      "Value": "2912000"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "MemFreq",
-      "Duration": 3000,
-      "Value": "2730000"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "GPUPowerPolicy",
-      "Duration": 3000,
-      "Value": "coarse_demand"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "UclampTAMin",
-      "Duration": 1500,
-      "Value": "100"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "UclampFgMin",
-      "Duration": 2000,
-      "Value": "50"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "EMSTUNEReqMode",
-      "Duration": 2000,
-      "Value": "0"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "EMSTUNELevel",
-      "Duration": 2000,
-      "Value": "2"
-    },
-    {
-      "PowerHint": "INTERACTIVE",
-      "Node": "UclampTAMin",
-      "Duration": 0,
-      "Value": "70"
-    },
-    {
-      "PowerHint": "INTERACTIVE",
-      "Node": "UclampTALatency",
-      "Duration": 0,
-      "Value": "1"
-    },
-    {
-      "PowerHint": "INTERACTIVE",
-      "Node": "UclampFgMin",
-      "Duration": 0,
-      "Value": "50"
-    },
-    {
-      "PowerHint": "INTERACTIVE",
-      "Node": "GPUPowerPolicy",
-      "Duration": 0,
-      "Value": "adaptive"
-    },
-    {
-      "PowerHint": "INTERACTIVE",
-      "Node": "RestrictedCpuset",
-      "Duration": 0,
-      "Value": "0-7"
-    },
-    {
-      "PowerHint": "INTERACTIVE",
-      "Node": "EMSTUNEReqMode",
-      "Duration": 0,
-      "Value": "0"
-    },
-    {
-      "PowerHint": "INTERACTIVE",
-      "Node": "EMSTUNELevel",
-      "Duration": 0,
-      "Value": "1"
-    },
-    {
-      "PowerHint": "INTERACTIVE",
-      "Node": "LCDEnable",
-      "Duration": 0,
-      "Value": "1"
-    },
-    {
-      "PowerHint": "INTERACTIVE",
-      "Node": "TouchscreenEnable",
-      "Duration": 0,
-      "Value": "1"
-    },
-    {
-      "PowerHint": "DISPLAY_IDLE",
-      "Node": "RestrictedCpuset",
-      "Duration": 0,
-      "Value": "0-7"
-    },
-    {
-      "PowerHint": "DISPLAY_IDLE",
-      "Node": "EMSTUNEReqMode",
-      "Duration": 0,
-      "Value": "4"
-    },
-    {
-      "PowerHint": "CPU_LOAD_RESET",
-      "Node": "GPUMinFreq",
-      "Duration": 50,
-      "Value": "312000"
-    },
-    {
-      "PowerHint": "CPU_LOAD_RESET",
-      "Node": "MemFreq",
-      "Duration": 33,
-      "Value": "1014000"
-    },
-    {
-      "PowerHint": "DISPLAY_INACTIVE",
-      "Node": "MemFreq",
-      "Duration": 0,
-      "Value": "546000"
-    },
-    {
-      "PowerHint": "DISPLAY_INACTIVE",
-      "Node": "RestrictedCpuset",
-      "Duration": 0,
-      "Value": "0-3"
-    },
-    {
-      "PowerHint": "DISPLAY_INACTIVE",
-      "Node": "EMSTUNEReqMode",
-      "Duration": 0,
-      "Value": "4"
-    },
-    {
-      "PowerHint": "DEVICE_IDLE",
-      "Node": "RestrictedCpuset",
-      "Duration": 0,
-      "Value": "0-3"
-    },
-    {
-      "PowerHint": "DEVICE_IDLE",
-      "Node": "EMSTUNEReqMode",
-      "Duration": 0,
-      "Value": "1"
-    },
-    {
-      "PowerHint": "LOW_POWER",
-      "Node": "CPUMaxFreq",
-      "Duration": 0,
-      "Value": "1768000"
-    },
-    {
-      "PowerHint": "LOW_POWER",
-      "Node": "EMSTUNEReqMode",
-      "Duration": 0,
-      "Value": "1"
-    },
-    {
-      "PowerHint": "FIXED_PERFORMANCE",
-      "Node": "CPUMaxFreq",
-      "Duration": 0,
-      "Value": "9999999"
-    },
-    {
-      "PowerHint": "FIXED_PERFORMANCE",
-      "Node": "CPUMinFreq",
-      "Duration": 0,
-      "Value": "9999999"
-    },
-    {
-      "PowerHint": "FIXED_PERFORMANCE",
-      "Node": "LPMEnableLevel",
-      "Duration": 0,
-      "Value": "1"
-    },
-    {
-      "PowerHint": "FIXED_PERFORMANCE",
-      "Node": "LPMEnable",
-      "Duration": 0,
-      "Value": "1"
-    },
-    {
-      "PowerHint": "FIXED_PERFORMANCE",
-      "Node": "EMSTUNEReqMode",
-      "Duration": 0,
-      "Value": "2"
-    },
-    {
-      "PowerHint": "FIXED_PERFORMANCE",
-      "Node": "EMSTUNELevel",
-      "Duration": 0,
-      "Value": "2"
-    },
-    {
-      "PowerHint": "GAME",
-      "Node": "EMSTUNEReqMode",
-      "Duration": 0,
-      "Value": "3"
-    },
-    {
-      "PowerHint": "CAMERA_LAUNCH",
-      "Node": "MemFreq",
-      "Duration": 1000,
-      "Value": "2730000"
-    },
-    {
-      "PowerHint": "CAMERA_LAUNCH",
-      "Node": "CPUMaxFreq",
-      "Duration": 1000,
-      "Value": "2704000"
-    },
-    {
-      "PowerHint": "CAMERA_LAUNCH",
-      "Node": "CPUMinFreq",
-      "Duration": 1000,
-      "Value": "1976000"
-    },
-    {
-      "PowerHint": "CAMERA_LAUNCH",
-      "Node": "EMSTUNEReqMode",
-      "Duration": 0,
-      "Value": "5"
-    },
-    {
-      "PowerHint": "CAMERA_LAUNCH",
-      "Node": "EMSTUNELevel",
-      "Duration": 0,
-      "Value": "2"
-    },
-    {
-      "PowerHint": "EXPENSIVE_RENDERING",
-      "Node": "PowerHALRenderingState",
-      "Duration": 0,
-      "Value": "EXPENSIVE_RENDERING"
-    },
-    {
-      "PowerHint": "EXPENSIVE_RENDERING",
-      "Node": "GPUMinFreq",
-      "Duration": 0,
-      "Value": "494000"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "CPUMinFreq",
-      "Duration": 0,
-      "Value": "1352000"
-    },
-    {
-      "PowerHint": "DOUBLE_TAP_TO_WAKE",
-      "Node": "DoubleTapToWakeEnable",
-      "Duration": 0,
-      "Value": "aot_enable,1"
-    }
-  ]
+    "Nodes": [
+        {
+            "Name": "GPUMinFreq",
+            "Path": "/sys/kernel/gpu/gpu_min_clock",
+            "Values": [
+                "767000",
+                "585000",
+                "494000",
+            ],
+            "ResetOnInit": true
+        },
+        {
+            "Name": "TABoost",
+            "Path": "/dev/cpuctl/top-app/cpu.uclamp.min",
+            "Values": [
+                "30",
+                "5"
+            ],
+            "ResetOnInit": true
+        },
+        {
+            "Name": "TouchscreenEnable",
+            "Path": "/sys/class/sec/tsp/input/enabled",
+            "Values": [
+                "1",
+                "0"
+            ],
+            "ResetOnInit": true
+        },
+        {
+            "Name": "LCDEnable",
+            "Path": "/sys/class/power_supply/battery/lcd",
+            "Values": [
+                "1",
+                "0"
+            ],
+            "ResetOnInit": true
+        },
+        {
+            "Name": "DoubleTapToWakeEnable",
+            "Path": "/sys/class/sec/tsp/cmd",
+            "Values": [
+                "aot_enable,0",
+                "aot_enable,1"
+            ],
+            "DefaultIndex": 0,
+            "ResetOnInit": false
+        }
+    ],
+    "Actions": [
+        {
+            "PowerHint": "INTERACTION",
+            "Node": "TABoost",
+            "Duration": 0,
+            "Value": "30"
+        },
+        {
+            "PowerHint": "INTERACTION",
+            "Node": "GPUMinFreq",
+            "Duration": 0,
+            "Value": "494000"
+        },
+        {
+            "PowerHint": "INTERACTIVE",
+            "Node": "TouchscreenEnable",
+            "Duration": 0,
+            "Value": "1"
+        },
+        {
+            "PowerHint": "INTERACTIVE",
+            "Node": "LCDEnable",
+            "Duration": 0,
+            "Value": "1"
+        },
+        {
+            "PowerHint": "DOUBLE_TAP_TO_WAKE",
+            "Node": "DoubleTapToWakeEnable",
+            "Duration": 0,
+            "Value": "aot_enable,1"
+        },
+        {
+            "PowerHint": "EXPENSIVE_RENDERING",
+            "Node": "GPUMinFreq",
+            "Duration": 0,
+            "Value": "585000"
+        }
+    ]
 }

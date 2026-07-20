@@ -204,6 +204,11 @@ PRODUCT_PACKAGES += \
 
 $(call soong_config_set,samsungVars,target_keymaster4_library,//vendor/samsung/universal2100-common:libskeymaster4device)
 
+# BPF
+ifeq ($(TARGET_LINUX_KERNEL_VERSION),5.4)
+PRODUCT_PROPERTY_OVERRIDES += ro.bpf.kver_override=5.10.239
+endif
+
 # Kernel
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := true
 PRODUCT_ENABLE_UFFD_GC := true

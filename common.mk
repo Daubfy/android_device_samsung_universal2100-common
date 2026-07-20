@@ -133,11 +133,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SamsungDoze
 
-# EPIC
-PRODUCT_PACKAGES += \
-    libepicoperator \
-    vendor.samsung_slsi.hardware.epic-service
-
 # fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
@@ -221,7 +216,6 @@ PRODUCT_PACKAGES += \
     init.usb.exynos2100 \
     init.ueventd.exynos2100 \
     init.recovery.exynos2100 \
-    init.epic.exynos2100 \
     init.gps.exynos2100 \
     init.fingerprint.exynos2100 \
     init.nfc.exynos2100 \
@@ -250,7 +244,6 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/samsung \
     hardware/samsung_slsi-linaro/exynos/cpboot_v3 \
-    hardware/samsung_slsi-linaro/exynos/epic \
     hardware/samsung_slsi-linaro/exynos/gralloc/gralloc4
 
 # Sensors

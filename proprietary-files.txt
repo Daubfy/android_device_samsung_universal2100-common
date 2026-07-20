@@ -112,15 +112,6 @@ vendor/firmware/secure_configuration.flm.cfg.bin
 vendor/lib64/libFilmGrainNoise.so
 vendor/lib64/libImageFormatConverter.so
 
-## EPIC
-vendor/bin/epic
-vendor/etc/ems.json
-vendor/etc/epic.json
-vendor/lib64/libems_service.so
-vendor/lib64/libepic_helper.so
-vendor/lib64/libexynos_migov.so
-vendor/lib64/libgmc.so
-
 ## Neural Networks
 vendor/etc/eden/gpu/eden_kernel_64.bin
 

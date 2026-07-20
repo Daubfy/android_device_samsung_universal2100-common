@@ -348,7 +348,11 @@ PRODUCT_PACKAGES += \
     android.hardware.usb-service.samsung \
     android.hardware.usb.gadget-service.samsung
 
+ifeq ($(TARGET_LINUX_KERNEL_VERSION),5.10)
+$(call soong_config_set,samsungUsbGadgetVars,gadget_name,10e00000.dwc3)
+else
 $(call soong_config_set,samsungUsbGadgetVars,gadget_name,10e00000.usb)
+endif
 
 PRODUCT_PACKAGES += \
     android.hardware.usb.accessory.prebuilt.xml \

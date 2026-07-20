@@ -36,14 +36,18 @@ TARGET_SOC := exynos2100
 include hardware/samsung_slsi-linaro/config/BoardConfig2100.mk
 
 ## Kernel source
-TARGET_LINUX_KERNEL_VERSION := 5.4
 TARGET_KERNEL_SOURCE := kernel/samsung/universal2100
-TARGET_KERNEL_CONFIG := \
-    gki_defconfig \
-    samsung/exynos2100.config \
-    samsung/$(TARGET_DEVICE).config
+TARGET_KERNEL_CONFIG ?= $(TARGET_DEVICE)_defconfig
+	
+KERNEL_MAKEFILE := $(TARGET_KERNEL_SOURCE)/Makefile
+ifneq ($(wildcard $(KERNEL_MAKEFILE)),)
+TARGET_LINUX_KERNEL_VERSION := $(shell awk \
+	'/^VERSION *=/{v=$$3} /^PATCHLEVEL *=/{p=$$3} END{print v"."p}' \
+	$(KERNEL_MAKEFILE))
+else
+TARGET_LINUX_KERNEL_VERSION := 5.4
+endif
 
-TARGET_KERNEL_NO_GCC := true
 
 ## DTB & DTBO
 BOARD_DTB_CFG := $(COMMON_PATH)/configs/kernel/$(TARGET_SOC).cfg

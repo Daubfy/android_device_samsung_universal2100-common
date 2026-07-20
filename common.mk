@@ -225,6 +225,7 @@ PRODUCT_PACKAGES += \
     init.gps.exynos2100 \
     init.fingerprint.exynos2100 \
     init.nfc.exynos2100 \
+    init.sensors.exynos2100 \
     fstab.exynos2100.etc \
     fstab.exynos2100.vendor_ramdisk \
     fstab.exynos2100.ramdisk

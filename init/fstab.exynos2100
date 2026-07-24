@@ -30,7 +30,7 @@ odm                                         /odm                ext4      ro    
 /devices/platform/10e00000.usb*             auto                vfat      default                            voldmanaged=usb:auto
 
 # SWAP
-/dev/block/zram0                            none                swap      defaults                           zramsize=30%
+/dev/block/zram0                            none                swap      defaults                           zramsize=50%
 
 # Samsung ODE
 /dev/block/by-name/keyrefuge                /keyrefuge          f2fs      rw,noatime,nosuid,nodev,discard,fsync_mode=strict,inlinecrypt   wait,check,fileencryption=aes-256-xts:aes-256-cts:v2,nofail

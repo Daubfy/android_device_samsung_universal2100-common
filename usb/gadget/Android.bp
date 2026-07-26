@@ -29,10 +29,7 @@ cc_binary {
     cppflags: [
         "-Wall",
         "-Werror",
-    ] + select(soong_config_variable("samsungUsbGadgetVars", "gadget_name"), {
-        any @ flag_val: ["-DGADGET_NAME=\"" + flag_val + "\""],
-        default: [],
-    }),
+    ],
     shared_libs: [
         "libbase",
         "liblog",

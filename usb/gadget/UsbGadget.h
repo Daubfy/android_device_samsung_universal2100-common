@@ -67,14 +67,17 @@ using ::ndk::ScopedAStatus;
 using ::std::shared_ptr;
 using ::std::string;
 
-constexpr char kGadgetName[] = GADGET_NAME;
-#ifndef UDC_PATH
-#define UDC_PATH "/sys/class/udc/" GADGET_NAME "/"
-#endif
-static MonitorFfs monitorFfs(kGadgetName);
+constexpr char kGadgetName1[] = "10e00000.dwc3";
+constexpr char kGadgetName2[]  = "10e00000.usb";
+constexpr char UDC_PATH[] = "/sys/class/udc/";
+constexpr const char* kGadgetNames[] = {kGadgetName1, kGadgetName2};
 
-#define DEVICE "device/"
-#define SPEED_PATH UDC_PATH "current_speed"
+std::string getGadgetName();
+extern std::string kGadgetName;
+inline MonitorFfs& getMonitorFfs() {
+    static MonitorFfs instance(kGadgetName.c_str());
+    return instance;
+}
 
 struct UsbGadget : public BnUsbGadget {
     UsbGadget();

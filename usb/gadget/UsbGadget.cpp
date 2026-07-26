@@ -38,15 +38,30 @@ namespace usb {
 namespace gadget {
 
 string enabledPath;
+std::string kGadgetName;
 
 using ::android::base::GetBoolProperty;
 using ::android::hardware::google::pixel::usb::kUvcEnabled;
+
+std::string getGadgetName() {
+    for (const char* candidate : kGadgetNames) {
+        std::string path = std::string(UDC_PATH) + candidate;
+        if (access(path.c_str(), F_OK) == 0) {
+            ALOGI("Detected UDC: %s", candidate);
+            return candidate;
+        }
+    }
+    ALOGE("FATAL: No known UDC found (%s or %s)",
+        kGadgetName1, kGadgetName2);
+    abort();
+}
 
 UsbGadget::UsbGadget() {
     if (access(OS_DESC_PATH, R_OK) != 0) {
         ALOGE("configfs setup not done yet");
         abort();
     }
+    kGadgetName = getGadgetName();
 }
 
 void currentFunctionsAppliedCallback(bool functionsApplied, void* payload) {
@@ -69,7 +84,9 @@ ScopedAStatus UsbGadget::getCurrentUsbFunctions(const shared_ptr<IUsbGadgetCallb
 ScopedAStatus UsbGadget::getUsbSpeed(const shared_ptr<IUsbGadgetCallback>& callback,
                                      int64_t in_transactionId) {
     std::string current_speed;
-    if (ReadFileToString(SPEED_PATH, &current_speed)) {
+    std::string speedPath =
+            std::string(UDC_PATH) + kGadgetName + "/current_speed";
+    if (ReadFileToString(speedPath, &current_speed)) {
         current_speed = Trim(current_speed);
         ALOGI("current USB speed is %s", current_speed.c_str());
         if (current_speed == "low-speed")
@@ -107,8 +124,8 @@ Status UsbGadget::tearDownGadget() {
         return Status::ERROR;
     }
 
-    if (monitorFfs.isMonitorRunning()) {
-        monitorFfs.reset();
+    if (getMonitorFfs().isMonitorRunning()) {
+        getMonitorFfs().reset();
     } else {
         ALOGI("mMonitor not running");
     }
@@ -251,14 +268,14 @@ Status UsbGadget::setupFunctions(long functions, const shared_ptr<IUsbGadgetCall
     bool ffsEnabled = false;
     int i = 0;
 
-    if (Status(addGenericAndroidFunctions(&monitorFfs, functions, &ffsEnabled, &i)) !=
+    if (Status(addGenericAndroidFunctions(&getMonitorFfs(), functions, &ffsEnabled, &i)) !=
         Status::SUCCESS) {
         return Status::ERROR;
     }
 
     if ((functions & GadgetFunction::ADB) != 0) {
         ffsEnabled = true;
-        if (Status(addAdb(&monitorFfs, &i)) != Status::SUCCESS) {
+        if (Status(addAdb(&getMonitorFfs(), &i)) != Status::SUCCESS) {
             return Status::ERROR;
         }
     }
@@ -282,18 +299,18 @@ Status UsbGadget::setupFunctions(long functions, const shared_ptr<IUsbGadgetCall
         return Status::SUCCESS;
     }
 
-    monitorFfs.registerFunctionsAppliedCallback(&currentFunctionsAppliedCallback, this);
+    getMonitorFfs().registerFunctionsAppliedCallback(&currentFunctionsAppliedCallback, this);
     // Monitors the ffs paths to pull up the gadget when descriptors are written.
     // Also takes of the pulling up the gadget again if the userspace process
     // dies and restarts.
-    monitorFfs.startMonitor();
+    getMonitorFfs().startMonitor();
 
     if (kDebug) {
         ALOGI("Mainthread in Cv");
     }
 
     if (callback) {
-        bool pullup = monitorFfs.waitForPullUp(timeout);
+        bool pullup = getMonitorFfs().waitForPullUp(timeout);
         ScopedAStatus ret = callback->setCurrentUsbFunctionsCb(
                 functions, pullup ? Status::SUCCESS : Status::ERROR, in_transactionId);
         if (!ret.isOk()) {

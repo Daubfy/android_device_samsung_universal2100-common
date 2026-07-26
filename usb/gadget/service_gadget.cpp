@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.usb.gadget-service.samsung"
+#define LOG_TAG "android.hardware.usb.gadget-service.exynos2100"
 
 #include <android-base/logging.h>
 #include <android/binder_manager.h>

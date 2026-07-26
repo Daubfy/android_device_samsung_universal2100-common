@@ -112,4 +112,5 @@ genfscon sysfs /devices/platform/mfc/video4linux/video10/name                   
 genfscon sysfs /devices/platform/mfc/video4linux/video11/name                          u:object_r:sysfs_v4l:s0
 
 # USB
-genfscon sysfs /devices/platform/10e00000.usb/udc/10e00000.usb/current_speed           u:object_r:sysfs_usb:s0
+genfscon sysfs /devices/platform/10e00000.usb/udc/10e00000.usb/current_speed                 u:object_r:sysfs_usb:s0
+genfscon sysfs /devices/platform/10e00000.usb/10e00000.dwc3/udc/10e00000.dwc3/current_speed  u:object_r:sysfs_usb:s0
